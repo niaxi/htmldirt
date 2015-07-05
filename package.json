@@ -1,0 +1,50 @@
+{
+  "name": "htmldirt",
+  "version": "0.0.1",
+  "description": "Grow custom responsive sites",
+  "main": "index.js",
+  "scripts": {
+    "less": "lessc --source-map src/styles/default/main.less src/styles/default/main.css",
+    "less:watch": "onchange 'src/styles/**/*.less' -- npm run less",
+    "server": "browser-sync start --server src --files=src/**/*.html,src/**/*.css,src/**/*.js",
+    "start": "npm run less:watch & npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niaxi/htmldirt.git"
+  },
+  "keywords": [
+    "html",
+    "template",
+    "theme",
+    "custom"
+  ],
+  "author": "Ni Axi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niaxi/htmldirt/issues"
+  },
+  "homepage": "https://github.com/niaxi/htmldirt",
+  "devDependencies": {
+    "jspm": "^0.15.7",
+    "less": "^2.5.1",
+    "onchange": "^1.1.0",
+    "watch": "^0.16.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.13",
+      "font-awesome": "npm:font-awesome@^4.3.0",
+      "normalize.css": "github:necolas/normalize.css@^3.0.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
+  }
+}
