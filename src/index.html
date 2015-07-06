@@ -11,6 +11,9 @@
 
     <title>HTMLdirt</title>
 
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -23,8 +26,51 @@
     <h1>Start here</h1>
 
     <div>
-      <p>Then change everything!</p>      
+      <p>Then change <a href="" title="gets you now here">everything</a>!</p>      
     </div>
+
+    <h2>Form</h2>
+
+    <form>
+      <fieldset>
+        <legend>Book Info</legend>
+        <img src="http://placehold.it/105x100" class="photo" width="105" height="100">
+        <div>Summary content here</div>
+      </fieldset>
+      <hr />
+      <div>
+        <label>Title</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>ISBN</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Author Name</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Publish Date</label>
+        <input type="date" />
+      </div>
+      <div>
+        <label>Synopsis</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Cover</label>
+        <select>
+          <option></option>
+          <option selected>Hard cover</option>
+          <option>Soft cover</option>
+        </select>
+      </div>
+
+      <div>
+        <button>Save Changes</button>
+      </div>
+    </form>
 
     <!-- dev -->
     <script src="jspm_packages/system.js"></script>

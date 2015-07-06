@@ -1,0 +1,192 @@
+/* 
+================================================
+place holder text
+================================================
+*/
+
+/* input place holder text */
+::-webkit-input-placeholder {
+   color: #444;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #444;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #444;  
+}
+
+:-ms-input-placeholder {  
+   color: #444;  
+}
+
+
+/* 
+================================================
+containers
+================================================
+*/
+form {
+  font-size: 1.3rem;
+}
+
+form > div, form fieldset > div {
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+label, legend {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+fieldset {
+  border-top: 1px solid #888;
+}
+
+legend {
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  border: 1px solid #888;
+}
+
+
+/* 
+================================================
+buttons
+================================================
+*/
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: @secondary-color;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: @base-radius;
+  border: 1px solid @border-color;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+/* 
+================================================
+buttons and input elements
+================================================
+*/
+button, input, optgroup, select, textarea {
+  color: #bbb;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  border: 1px solid #333434;
+  background-color: transparent;
+  padding: 1.5px 3px;
+  height: 26px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+input, textarea, select, fieldset {
+  margin-bottom: 1.5rem;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #288edf;
+  border-color: #134f7f; 
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #4ca1e4;
+  border-color: #1EAEDB; 
+}
+
+button[disabled],
+.button[disabled]
+input[type="submit"][disabled] 
+input[type="reset"][disabled] 
+input[type="button"][disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.button-primary[disabled]
+.button.button-primary[disabled],
+button.button-primary[disabled],
+input[type="submit"][disabled].button-primary,
+input[type="reset"][disabled].button-primary,
+input[type="button"][disabled].button-primary {
+  background-color: #288edf;
+  border-color: #134f7f;
+}
+.button.button-primary[disabled]:hover,
+button.button-primary[disabled]:hover,
+input[type="submit"][disabled].button-primary:hover,
+input[type="reset"][disabled].button-primary:hover,
+input[type="button"][disabled].button-primary:hover,
+.button.button-primary[disabled]:focus,
+button.button-primary[disabled]:focus,
+input[type="submit"][disabled].button-primary:focus,
+input[type="reset"][disabled].button-primary:focus,
+input[type="button"][disabled].button-primary:focus {
+  background-color: #288edf;
+  border-color: #134f7f;
+}
+
+input[type="date"]:focus, 
+input[type="time"]:focus, 
+input[type="datetime"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="search"]:focus, 
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="url"]:focus, 
+input[type="password"]:focus, 
+textarea:focus, select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0;
+}
