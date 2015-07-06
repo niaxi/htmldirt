@@ -1,5 +1,63 @@
+/* normalize is imported an inlined because of an issue with importing it in index.js 
+-- the import order is not maintained */
+@import (inline) "../../jspm_packages/github/necolas/normalize.css@3.0.3/normalize.css";
+
+/* 
+================================================
+VARIABLES
+================================================
+*/
 @base: #ccc;
 
+
+/* 
+================================================
+GLOBAL OVERRIDES + LIBRARY CUSTOMIZATIONS
+================================================
+*/
+
+/* 
+================================================
+global
+================================================
+*/
+
+/*
+From: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+apply a natural box layout model to all elements, but allowing components to change 
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 70.83%; 
+}
 body {
-  background-color: @base;
+  font-size: 1.7em; 
+  line-height: 1.5;
+  background-color: #242628;
+  /*background-image: url(cloth.png);*/
+  color: #777;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* input place holder text */
+::-webkit-input-placeholder {
+   color: #444;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #444;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #444;  
+}
+
+:-ms-input-placeholder {  
+   color: #444;  
 }
