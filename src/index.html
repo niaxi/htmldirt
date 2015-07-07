@@ -12,7 +12,7 @@
     <title>HTMLdirt</title>
 
 
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700">
+    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -66,11 +66,94 @@
           <option>Soft cover</option>
         </select>
       </div>
+      <div>
+        <label>Details</label>
+        <textarea placeholder="Some details" rows="5"></textarea>
+      </div>
 
       <div>
-        <button>Save Changes</button>
+        <button class="button--primary">Save</button>
+        <button>Cancel</button>
       </div>
     </form>
+
+
+    <h2>Table</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Sex</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dave Gamache</td>
+          <td>26</td>
+          <td>Male</td>
+          <td>San Francisco</td>
+        </tr>
+        <tr>
+          <td>Dwayne Johnson</td>
+          <td>42</td>
+          <td>Male</td>
+          <td>Hayward</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Typography</h2>
+
+    <h3>Lists</h3>
+
+    <h4>Unordered Lists</h4>
+
+    <ul>
+      <li>Unordered lists have basic styles</li>
+      <li>
+        They use the circle list style
+        <ul>
+          <li>Nested lists styled to feel right</li>
+          <li>Can nest either type of list into the other</li>
+        </ul>
+      </li>
+      <li>Just more list items mama san</li>
+    </ul>
+
+    <h4>Ordered Lists</h4>
+
+    <ol>
+      <li>Ordered lists also have basic styles</li>
+      <li>
+        They use the decimal list style
+        <ol>
+          <li>Nested ordered list item</li>
+          <li>Another list item, nested</li>
+        </ol>
+      </li>
+      <li>
+        They use the decimal list style
+        <ul>
+          <li>Ordered and unordered can be nested</li>
+          <li>Can nest either type of list into the other</li>
+        </ul>
+      </li>
+      <li>Last list item just for the fun</li>
+    </ol>
+
+
+    <h3>Code</h3>
+
+    <pre>
+      <code>
+        .some-class {
+          background-color: red;
+        }
+      </code>
+    </pre>
 
     <!-- dev -->
     <script src="jspm_packages/system.js"></script>

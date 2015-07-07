@@ -7,29 +7,38 @@
 VARIABLES
 ================================================
 */
-// Breakpoints
+// breakpoints
 @bp-larger-than-mobile    : 400px;
 @bp-larger-than-phablet   : 550px;
 @bp-larger-than-tablet    : 750px;
 @bp-larger-than-desktop   : 1000px;
 @bp-larger-than-desktophd : 1200px;
 
-// Typography
+// typography
 @preferred-font: 'Open Sans';
 @font-family: @preferred-font,'Helvetica Neue',Helvetica,Arial,sans-serif;
 
-// Colors
+// colors
 @primary-color: #33c3f0;
 @secondary-color: #555;
+
 @border-color: #bbb;
-@background-color: #242628;
+@border-color--subtle: #333434;
+@border-color--loud: #E1E1E1;
+
+@bg-color: #242628;
+@bg-color--subtle: #111;
+@bg-color--loud: #F1F1F1;
+
 @text-color: #777;
+@text-color--subtle: #444;
+@text-color--loud: #bbb;
+
 @link-color: #3b8bba;
 @link-color--active: #0074d9;
 @link-color--hover: #0074d9;
 
-
-// Misc
+// misc
 @base-radius: 4px;
 
 
@@ -60,11 +69,27 @@ html {
 body {
   font-size: 1.7em; 
   line-height: 1.5;
-  background-color: @background-color;
+  background-color: @bg-color;
   color: @text-color;
   font-family: @font-family;
 }
 
+/* spacing */
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+.button, button, input, textarea, select, fieldset {
+  margin-bottom: 1.5rem;
+}
 
 /* 
 ================================================
@@ -74,3 +99,4 @@ MODULES
 
 @import 'type.less';
 @import 'form.less';
+@import 'table.less';

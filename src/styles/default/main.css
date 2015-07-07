@@ -460,6 +460,26 @@ body {
   color: #777777;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+/* spacing */
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+.button,
+button,
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
 /* 
 ================================================
 MODULES
@@ -506,6 +526,9 @@ h6 {
   line-height: 1.6;
   letter-spacing: 0;
 }
+p {
+  margin-top: 0;
+}
 a {
   background: transparent;
   color: #3b8bba;
@@ -528,6 +551,41 @@ hr {
   border: 0;
   border-top: 1px solid #666;
 }
+ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+}
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 1rem;
+}
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #111111;
+  border: 1px solid #333434;
+  border-radius: 4px;
+}
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
 /* 
 ================================================
 place holder text
@@ -535,33 +593,29 @@ place holder text
 */
 /* input place holder text */
 ::-webkit-input-placeholder {
-  color: #444;
+  color: #444444;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #444;
+  color: #444444;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #444;
+  color: #444444;
 }
 :-ms-input-placeholder {
-  color: #444;
+  color: #444444;
 }
 /* 
 ================================================
 containers
 ================================================
 */
-form {
-  font-size: 1.3rem;
-}
 form > div,
 form fieldset > div {
   padding: 0;
   margin: 0;
-  width: 30%;
-  display: inline-block;
+  display: block;
   margin-left: 1%;
   margin-right: 1%;
 }
@@ -569,15 +623,14 @@ label,
 legend {
   font-weight: normal;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
 }
 fieldset {
-  border-top: 1px solid #888;
+  border: none;
 }
 legend {
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0;
   text-transform: uppercase;
-  border: 1px solid #888;
+  font-size: 1.2rem;
 }
 /* 
 ================================================
@@ -594,7 +647,6 @@ input[type="button"] {
   padding: 0 30px;
   color: #555555;
   text-align: center;
-  font-size: 11px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
@@ -612,12 +664,13 @@ input[type="button"] {
 buttons and input elements
 ================================================
 */
+.button,
 button,
 input,
 optgroup,
 select,
 textarea {
-  color: #bbb;
+  color: #bbbbbb;
 }
 input[type="date"],
 input[type="time"],
@@ -634,36 +687,31 @@ select {
   border: 1px solid #333434;
   background-color: transparent;
   padding: 1.5px 3px;
-  height: 26px;
+  height: 3.2rem;
   width: 100%;
   border-radius: 4px;
+  font-size: 2rem;
 }
-input,
-textarea,
-select,
-fieldset {
-  margin-bottom: 1.5rem;
-}
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
+.button.button--primary,
+button.button--primary,
+input[type="submit"].button--primary,
+input[type="reset"].button--primary,
+input[type="button"].button--primary {
+  color: #bbbbbb;
   background-color: #288edf;
   border-color: #134f7f;
 }
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
+.button.button--primary:hover,
+button.button--primary:hover,
+input[type="submit"].button--primary:hover,
+input[type="reset"].button--primary:hover,
+input[type="button"].button--primary:hover,
+.button.button--primary:focus,
+button.button--primary:focus,
+input[type="submit"].button--primary:focus,
+input[type="reset"].button--primary:focus,
+input[type="button"].button--primary:focus {
+  color: #bbbbbb;
   background-color: #4ca1e4;
   border-color: #1EAEDB;
 }
@@ -672,24 +720,24 @@ button[disabled],
   opacity: 0.3;
   cursor: not-allowed;
 }
-.button-primary[disabled] .button.button-primary[disabled],
-button.button-primary[disabled],
-input[type="submit"][disabled].button-primary,
-input[type="reset"][disabled].button-primary,
-input[type="button"][disabled].button-primary {
+.button--primary[disabled] .button.button--primary[disabled],
+button.button--primary[disabled],
+input[type="submit"][disabled].button--primary,
+input[type="reset"][disabled].button--primary,
+input[type="button"][disabled].button--primary {
   background-color: #288edf;
   border-color: #134f7f;
 }
-.button.button-primary[disabled]:hover,
-button.button-primary[disabled]:hover,
-input[type="submit"][disabled].button-primary:hover,
-input[type="reset"][disabled].button-primary:hover,
-input[type="button"][disabled].button-primary:hover,
-.button.button-primary[disabled]:focus,
-button.button-primary[disabled]:focus,
-input[type="submit"][disabled].button-primary:focus,
-input[type="reset"][disabled].button-primary:focus,
-input[type="button"][disabled].button-primary:focus {
+.button.button--primary[disabled]:hover,
+button.button--primary[disabled]:hover,
+input[type="submit"][disabled].button--primary:hover,
+input[type="reset"][disabled].button--primary:hover,
+input[type="button"][disabled].button--primary:hover,
+.button.button--primary[disabled]:focus,
+button.button--primary[disabled]:focus,
+input[type="submit"][disabled].button--primary:focus,
+input[type="reset"][disabled].button--primary:focus,
+input[type="button"][disabled].button--primary:focus {
   background-color: #288edf;
   border-color: #134f7f;
 }
@@ -707,5 +755,28 @@ textarea:focus,
 select:focus {
   border: 1px solid #33C3F0;
   outline: 0;
+}
+textarea {
+  min-height: 10rem;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #333434;
+}
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+tbody td {
+  color: #bbbbbb;
 }
 /*# sourceMappingURL=main.css.map */
