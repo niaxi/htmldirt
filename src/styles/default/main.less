@@ -14,7 +14,7 @@ VARIABLES
 @bp-larger-than-desktop   : 1000px;
 @bp-larger-than-desktophd : 1200px;
 
-// typography
+// typography (baseline)
 @preferred-font: 'Open Sans';
 @font-family: @preferred-font,'Helvetica Neue',Helvetica,Arial,sans-serif;
 
@@ -30,7 +30,7 @@ VARIABLES
 @bg-color--subtle: #111;
 @bg-color--loud: #F1F1F1;
 
-@text-color: #777;
+@text-color: #888;
 @text-color--subtle: #444;
 @text-color--loud: #bbb;
 
@@ -60,15 +60,18 @@ apply a natural box layout model to all elements, but allowing components to cha
 */
 html {
   box-sizing: border-box;
-  font-size: 70.83%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+/* base coat */
+html { 
+  font-size: 70.83%;
+}
 body {
-  font-size: 1.7em; 
-  line-height: 1.5;
+  font-size: 1.85em; 
+  line-height: 1.6;
   background-color: @bg-color;
   color: @text-color;
   font-family: @font-family;
@@ -100,3 +103,12 @@ MODULES
 @import 'type.less';
 @import 'form.less';
 @import 'table.less';
+
+
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+  body {
+    font-size: 1.7em; 
+  }
+}

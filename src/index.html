@@ -11,8 +11,7 @@
 
     <title>HTMLdirt</title>
 
-
-    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700"> -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,26 +37,32 @@
         <div>Summary content here</div>
       </fieldset>
       <hr />
+
       <div>
         <label>Title</label>
         <input type="text" />
       </div>
+
       <div>
         <label>ISBN</label>
         <input type="text" />
       </div>
+
       <div>
         <label>Author Name</label>
         <input type="text" />
       </div>
+
       <div>
         <label>Publish Date</label>
         <input type="date" />
       </div>
+
       <div>
         <label>Synopsis</label>
         <input type="text" />
       </div>
+
       <div>
         <label>Cover</label>
         <select>
@@ -66,15 +71,41 @@
           <option>Soft cover</option>
         </select>
       </div>
+
       <div>
         <label>Details</label>
         <textarea placeholder="Some details" rows="5"></textarea>
       </div>
 
       <div>
+        <label>Preface</label>
+        <input type="text" />
+      </div>
+
+      <div>
+        <label>Genre</label>
+        <div>
+          <label><input type="checkbox" name="genre"/>Drama</label>
+          <label><input type="checkbox" name="genre" />Comedy</label>
+          <label><input type="checkbox" name="genre" />Action</label>
+          <label><input type="checkbox" name="genre" />Thriller</label>
+        </div>
+      </div>
+
+      <div>
+        <label>Rating</label>
+        <div>
+          <label><input type="radio" name="rating" />Must read</label>
+          <label><input type="radio" name="rating" />Recommended</label>
+          <label><input type="radio" name="rating" />Consider</label>
+          <label><input type="radio" name="rating" />Pass</label>
+        </div>
+      </div>
+
+      <footer>
         <button class="button--primary">Save</button>
         <button>Cancel</button>
-      </div>
+      </footer>
     </form>
 
 
