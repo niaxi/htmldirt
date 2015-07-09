@@ -656,8 +656,8 @@ input[type="button"] {
   margin-right: 1rem;
   color: #555555;
   text-align: center;
-  font-weight: bold;
-  line-height: 38px;
+  font-size: 1.8rem;
+  line-height: 1.6rem;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -810,7 +810,7 @@ label input {
   input[type="submit"],
   input[type="reset"],
   input[type="button"] {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: normal;
   }
   input[type="date"],
@@ -825,7 +825,8 @@ label input {
   input[type="password"],
   textarea,
   select {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+    height: 3rem;
   }
 }
 table {
@@ -848,10 +849,120 @@ td:last-child {
 tbody td {
   color: #bbbbbb;
 }
+/* 
+================================================
+header
+================================================
+*/
+body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: #333;
+  color: #aaa;
+  box-shadow: 0 0 0.6em rgba(17, 17, 17, 0.3);
+  z-index: 1001;
+}
+app-bar,
+.app-bar {
+  display: block;
+}
+app-bar h3,
+.app-bar h3 {
+  margin: 1rem 0;
+  font-size: 1.9rem;
+  line-height: 1.5;
+}
+app-bar .title,
+.app-bar .title,
+app-bar .icon,
+.app-bar .icon,
+app-bar .logo,
+.app-bar .logo {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+app-bar .icon,
+.app-bar .icon {
+  cursor: pointer;
+  width: 2.2rem;
+  text-align: center;
+}
+app-bar .button,
+.app-bar .button {
+  height: 30px;
+  line-height: 30px;
+}
+app-icon,
+.app-icon {
+  display: inline-block;
+  margin: 0 .5em;
+  position: relative;
+  font-weight: 700;
+  float: left;
+  padding: 0;
+  max-width: 50%;
+  white-space: nowrap;
+}
+app-icon *,
+.app-icon * {
+  vertical-align: middle;
+}
+app-menu,
+.app-menu {
+  display: block;
+  float: right;
+  font-size: 1.3rem;
+  margin-right: 0.4em;
+}
+app-menu .more,
+.app-menu .more {
+  float: right;
+}
+app-menu a,
+.app-menu a {
+  padding: 0.3em 0.9em;
+}
+app-menu ul,
+.app-menu ul,
+app-menu li,
+.app-menu li {
+  list-style: none;
+  margin: 1.3rem 0;
+  padding: 0;
+}
+app-menu li,
+.app-menu li {
+  text-align: right;
+}
+app-menu *,
+.app-menu * {
+  vertical-align: middle;
+}
+app-menu[type="overflow"] ul,
+.app-menu[type="overflow"] ul {
+  display: none;
+}
+app-menu[type="overflow"][expanded] ul,
+.app-menu[type="overflow"][expanded] ul {
+  display: block;
+  top: 3.6rem;
+  right: 1.2rem;
+  position: fixed;
+  background-color: #333;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid #555;
+  border-top: none;
+  width: 50%;
+  opacity: 0.9;
+}
 /* Larger than desktop */
 @media (min-width: 1000px) {
   body {
-    font-size: 1.7em;
+    font-size: 1.5em;
   }
 }
 /*# sourceMappingURL=main.css.map */
