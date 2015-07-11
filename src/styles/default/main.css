@@ -841,22 +841,27 @@ table {
   overflow: auto;
   display: block;
 }
-th,
-td {
+table th,
+table td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #333434;
 }
-th:first-child,
-td:first-child {
+table th:first-child,
+table td:first-child {
   padding-left: 0;
 }
-th:last-child,
-td:last-child {
+table th:last-child,
+table td:last-child {
   padding-right: 0;
 }
-tbody td {
+table tbody td {
   color: #bbbbbb;
+}
+table .fa {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
 }
 /* Larger than tablet */
 @media (min-width: 750px) {

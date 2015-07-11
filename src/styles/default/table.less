@@ -2,27 +2,31 @@ table {
   width: 100%;
   overflow: auto;
   display: block;
-}
 
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid @border-color--subtle;
-}
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid @border-color--subtle;
+  }
+  th:first-child,
+  td:first-child {
+    padding-left: 0;
+  }
+  th:last-child,
+  td:last-child {
+    padding-right: 0;
+  }
 
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
+  tbody td {
+    color: @text-color--loud;
+  }
 
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
-tbody td {
-  color: @text-color--loud;
+  .fa {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 
