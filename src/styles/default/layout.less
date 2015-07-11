@@ -15,3 +15,56 @@ body > header {
   z-index: 1001;
 }
 
+
+/* 
+================================================
+aside
+================================================
+*/
+body > aside {
+  position: fixed;
+  z-index: 1000;
+  top: 5rem;
+  left: 0;
+  bottom: 0;
+  background: #222;
+  font-size: 1.3rem;
+  padding: 1rem;
+  width: 20rem;
+  border-right: 2px solid #333;
+
+  transform: translateX(-100%);
+  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  visibility: hidden;
+
+  &.off-screen {
+    transform: translateX(-100%);
+    transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
+    visibility: hidden;
+  }
+  &.show, &.off-screen.show {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+
+/* 
+================================================
+main
+================================================
+*/
+main {
+  padding: 1rem 1.5rem;
+}
+
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+  body > aside {
+    display: inline-block;
+  }  
+  main {
+    display: inline-block;
+  }
+}
