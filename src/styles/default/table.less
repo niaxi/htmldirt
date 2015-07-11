@@ -1,5 +1,7 @@
 table {
   width: 100%;
+  overflow: auto;
+  display: block;
 }
 
 th,
@@ -21,4 +23,13 @@ td:last-child {
 
 tbody td {
   color: @text-color--loud;
+}
+
+
+/* Larger than tablet */
+@media (min-width: @bp-larger-than-tablet) {
+  table {
+    display: table;
+    overflow: none;
+  }
 }

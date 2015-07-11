@@ -30,7 +30,7 @@ body > aside {
   background: #222;
   font-size: 1.3rem;
   padding: 1rem;
-  width: 20rem;
+  width: 18rem;
   border-right: 2px solid #333;
 
   transform: translateX(-100%);
@@ -61,10 +61,23 @@ main {
 
 /* Larger than desktop */
 @media (min-width: @bp-larger-than-desktop) {
+
+  body {
+    display: table;
+    width: 100%;
+  }
+
   body > aside {
-    display: inline-block;
-  }  
-  main {
-    display: inline-block;
+    padding-top: 8rem;
+    position: inherit;
+    display: table-cell;
+    vertical-align: top;
+    visibility: inherit;
+    transform: inherit;
+  }
+
+  body > main {
+    display: table-cell;
+    border-left: 2px solid @border-color--subtle;
   }
 }
