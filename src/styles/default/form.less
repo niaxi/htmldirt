@@ -95,6 +95,14 @@ buttons and input elements
 .button, button, input, optgroup, select, textarea {
   color: @text-color--loud;
 }
+.button, button, input, optgroup, select, textarea, fieldset {
+  margin-bottom: 1.5rem;
+}
+
+label > input[type="radio"],
+label > input[type="checkbox"] {
+  margin-bottom: 0.4rem;
+}
 
 input[type="date"],
 input[type="time"],
@@ -252,7 +260,7 @@ label {
   input[type="password"],
   textarea,
   select {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     height: 3rem;
   }
 

@@ -477,14 +477,6 @@ ol,
 form {
   margin-bottom: 2.5rem;
 }
-.button,
-button,
-input,
-textarea,
-select,
-fieldset {
-  margin-bottom: 1.5rem;
-}
 /* 
 ================================================
 MODULES
@@ -588,7 +580,6 @@ code {
 }
 pre > code {
   display: block;
-  padding: 1rem 1.5rem;
   white-space: pre;
 }
 /* 
@@ -682,6 +673,19 @@ optgroup,
 select,
 textarea {
   color: #bbbbbb;
+}
+.button,
+button,
+input,
+optgroup,
+select,
+textarea,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+label > input[type="radio"],
+label > input[type="checkbox"] {
+  margin-bottom: 0.4rem;
 }
 input[type="date"],
 input[type="time"],
@@ -827,7 +831,7 @@ label input {
   input[type="password"],
   textarea,
   select {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     height: 3rem;
   }
 }
