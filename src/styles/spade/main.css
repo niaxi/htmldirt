@@ -894,7 +894,7 @@ aside
 body > aside {
   position: fixed;
   z-index: 1000;
-  top: 5rem;
+  top: 6rem;
   left: 0;
   bottom: 0;
   background: #222;
@@ -922,7 +922,7 @@ main
 ================================================
 */
 main {
-  padding: 1rem 1.5rem;
+  padding: 6rem 1.5rem 1rem 1.5rem;
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {
@@ -931,7 +931,7 @@ main {
     width: 100%;
   }
   body > aside {
-    padding-top: 8rem;
+    padding-top: 6rem;
     position: inherit;
     display: table-cell;
     vertical-align: top;
