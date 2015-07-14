@@ -1,97 +1,6 @@
 /* normalize is imported an inlined because of an issue with importing it in index.js 
 -- the import order is not maintained */
-@import (inline) "../../jspm_packages/github/necolas/normalize.css@3.0.3/normalize.css";
-
-/* 
-================================================
-VARIABLES
-================================================
-*/
-// breakpoints
-@bp-larger-than-mobile    : 400px;
-@bp-larger-than-phablet   : 550px;
-@bp-larger-than-tablet    : 750px;
-@bp-larger-than-desktop   : 1000px;
-@bp-larger-than-desktophd : 1200px;
-
-// typography (baseline)
-@preferred-font: 'Open Sans';
-@font-family: @preferred-font,'Helvetica Neue',Helvetica,Arial,sans-serif;
-
-// colors
-@primary-color: #33c3f0;
-@secondary-color: #555;
-
-@border-color: #bbb;
-@border-color--subtle: #333434;
-@border-color--loud: #E1E1E1;
-
-@bg-color: #242628;
-@bg-color--subtle: #111;
-@bg-color--loud: #F1F1F1;
-
-@text-color: #888;
-@text-color--subtle: #444;
-@text-color--loud: #bbb;
-
-@link-color: #3b8bba;
-@link-color--active: #0074d9;
-@link-color--hover: #0074d9;
-
-// misc
-@base-radius: 4px;
-
-
-/* 
-================================================
-GLOBAL OVERRIDES + LIBRARY CUSTOMIZATIONS
-================================================
-*/
-
-/* 
-================================================
-global
-================================================
-*/
-
-/*
-From: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
-apply a natural box layout model to all elements, but allowing components to change 
-*/
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/* base coat */
-html { 
-  font-size: 70.83%;
-}
-body {
-  font-size: 1.85em; 
-  line-height: 1.6;
-  background-color: @bg-color;
-  color: @text-color;
-  font-family: @font-family;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-/* spacing */
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-  margin-bottom: 2.5rem;
-}
+// @import (inline) "../../jspm_packages/github/necolas/normalize.css@3.0.3/normalize.css";
 
 
 /* 
@@ -100,17 +9,12 @@ MODULES
 ================================================
 */
 
-@import 'type.less';
+@import 'variables.less';
+
+@import 'layout.less';
+@import 'typography.less';
 @import 'form.less';
 @import 'table.less';
-@import 'layout.less';
-@import 'tags.less';
+// @import 'tags.less';
+@import 'colors.less';
 
-
-
-/* Larger than desktop */
-@media (min-width: @bp-larger-than-desktop) {
-  body {
-    font-size: 1.5em; 
-  }
-}

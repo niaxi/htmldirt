@@ -1,5 +1,37 @@
 /* 
 ================================================
+global
+================================================
+*/
+
+/*
+From: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+apply a natural box layout model to all elements, but allowing components to change 
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* spacing */
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+
+/* 
+================================================
 header
 ================================================
 */
@@ -9,10 +41,9 @@ body > header {
   left: 0;
   right: 0;
   height: 5rem;
-  background: #333;
-  color: #aaa;
-  box-shadow: 0 0 .6em rgba(17, 17, 17, 0.3);
   z-index: 1001;
+
+  padding: 1rem 1rem;
 }
 
 
@@ -27,11 +58,8 @@ body > aside {
   top: 6rem;
   left: 0;
   bottom: 0;
-  background: #222;
-  font-size: 1.3rem;
   padding: 1rem;
   width: 18rem;
-  border-right: 2px solid #333;
 
   transform: translateX(-100%);
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
@@ -45,6 +73,18 @@ body > aside {
   &.show, &.off-screen.show {
     visibility: visible;
     transform: translateX(0);
+  }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    margin-left: 1.9rem;
+  }
+  li {
+    margin-top: 0.2rem;
   }
 }
 
@@ -78,6 +118,5 @@ main {
 
   body > main {
     display: table-cell;
-    border-left: 2px solid @border-color--subtle;
   }
 }

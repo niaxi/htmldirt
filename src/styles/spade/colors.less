@@ -1,0 +1,31 @@
+/* base coat */
+body {
+  background-color: @bg-color;
+  color: @text-color;
+}
+
+body > header {
+  background: #333;
+  color: #aaa;
+  box-shadow: 0 0 .6em rgba(17, 17, 17, 0.3);
+}
+
+body > aside {
+  background: #222;
+  border-right: 2px solid #333;
+}
+
+
+code {
+  background: @bg-color--subtle;
+  border: 1px solid @border-color--subtle;
+}
+
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+
+  body > main {
+    border-left: 2px solid @border-color--subtle;
+  }
+}
