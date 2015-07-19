@@ -12,8 +12,7 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
+  margin: 0 1rem 2rem 0;
   font-weight: normal;
   letter-spacing: normal;
 }
@@ -34,6 +33,9 @@ a {
   color: @link-color;
   text-decoration: none; 
 
+  &:visited {
+    color: @link-color--visited;
+  }
   &:active, &:hover {
     outline: 0;
   }
@@ -87,24 +89,6 @@ pre > code {
   display: block;
   // padding: 1rem 1.5rem;
   white-space: pre; 
-}
-
-
-body > header {
-  & > * {
-    font-size: 1.9rem; 
-    line-height: 1.5;
-  }
-}
-
-body > aside {
-  font-size: 1.3rem;
-
-  h3 { 
-    font-size: 1.4rem; 
-    line-height: 1.8;
-    margin: 0;
-  }
 }
 
 
