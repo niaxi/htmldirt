@@ -599,7 +599,7 @@ body > header input[type="url"],
 body > header input[type="password"] select {
   margin: 0;
   height: 2rem;
-  padding: 0 0.2rem;
+  padding: 0 0.3rem;
 }
 body > header > button {
   margin-left: 1.5rem;
@@ -1038,6 +1038,30 @@ table .fa {
   table {
     display: table;
     overflow: none;
+  }
+}
+/* base coat */
+body {
+  background-color: #242628;
+  color: #888888;
+}
+body > header {
+  background: #333;
+  color: #aaa;
+  box-shadow: 0 0 0.6em rgba(17, 17, 17, 0.3);
+}
+body > aside {
+  background: #222;
+  border-right: 2px solid #333;
+}
+code {
+  background: #111111;
+  border: 1px solid #333434;
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  body > main {
+    border-left: 2px solid #333434;
   }
 }
 /*# sourceMappingURL=clay-light.css.map */
