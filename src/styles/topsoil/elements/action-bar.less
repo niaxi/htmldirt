@@ -12,17 +12,6 @@ action-bar
 */
 
 .action-bar() {
-  .action-bar__title;
-
-  [role="actions"],
-  nav, 
-  menu {
-    .action-bar__actions;
-  }
-}
-
-
-.action-bar__title() {
   * {
     font-size: 1.9rem; 
     line-height: 1.5;
@@ -31,6 +20,46 @@ action-bar
     margin-bottom: 0;
   }
 
+  [role="title"] {
+    .action-bar__title;
+  }
+
+  [role="actions"],
+  nav, 
+  menu {
+    .action-bar__actions;
+  }
+
+  .button, 
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"]
+  select {
+    margin: 0;
+    height: 2rem;
+    padding: 0 0.2rem;
+  }
+
+  &>button {
+    margin-left: 1.5rem;
+  }
+
+  .clearfix;
+}
+
+
+.action-bar__title() {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
@@ -51,10 +80,8 @@ action-bar
 
 .action-bar__actions() {
   
-  &, &>ul {
-    float: right;
-  }
-  
+  float: right;
+
   * {
     font-size: 1.3rem;
     line-height: 1rem;
@@ -75,18 +102,5 @@ action-bar
 
   a {
     height: 100%;
-  }
-
-  .button, 
-  button,
-  input {
-    margin: 0;
-    height: 2.2rem;
-    padding: 0 0.5rem;
-    float: right;
-  }
-
-  &>button {
-    margin-left: 1.5rem;
   }
 }

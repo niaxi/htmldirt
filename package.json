@@ -4,7 +4,7 @@
   "description": "Grow custom responsive sites",
   "main": "index.js",
   "scripts": {
-    "less": "lessc --source-map src/styles/loam/main.less src/styles/loam/main.css",
+    "less": "lessc --source-map src/styles/clay-light.less src/styles/clay-light.css",
     "less:watch": "onchange 'src/styles/**/*.less' -- npm run less",
     "server": "browser-sync start --server src --files=src/**/*.html,src/**/*.css,src/**/*.js",
     "start": "npm run less:watch & npm run server",

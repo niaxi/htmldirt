@@ -31,11 +31,13 @@ Application level navigation
 .navigation-drawer() {
   position: fixed;
   z-index: 1000;
-  top: 6rem;
+  top: 5rem;
   left: 0;
   bottom: 0;
   padding: 1rem;
   width: 18rem;
+
+  background-color: #fff;
 
   transform: translateX(-100%);
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
@@ -72,13 +74,20 @@ Example:
 </body>  
 */
 
+// present body > aside as an app-bar
 body > header {
   .app-bar;
   .action-bar;
 
-  [role="title"]>button {
-    border: none;
-    background: transparent;
+  [role="title"] {
+    &>button {
+      border: none;
+      background: transparent;
+    }
+
+    h2, h3 {
+      display: none;
+    }
   }
 
   [role="actions"] {
@@ -113,11 +122,15 @@ body > header {
   }
 }
 
+
+// present body > aside as navigation drawer
 body > aside {
   .navigation-menu;
   .navigation-drawer;
 }
 
+
+// style main content area
 main {
   display: block;
   padding: 6rem 1.5rem 1rem 1.5rem;
@@ -133,8 +146,11 @@ main {
   }
 
   body > header {
-    [role="title"]>button {
-      display: none;
+
+    [role="title"] {
+      &>button {
+        display: none;
+      }
     }
 
     [role="actions"]{

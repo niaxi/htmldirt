@@ -527,30 +527,27 @@ body > header * {
   margin-top: 0;
   margin-bottom: 0;
 }
-body > header h1,
-body > header h2,
-body > header h3,
-body > header h4,
-body > header h5,
-body > header h6 {
+body > header [role="title"] h1,
+body > header [role="title"] h2,
+body > header [role="title"] h3,
+body > header [role="title"] h4,
+body > header [role="title"] h5,
+body > header [role="title"] h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
-body > header h1 {
+body > header [role="title"] h1 {
   font-size: 2rem;
 }
-body > header h2 {
+body > header [role="title"] h2 {
   font-size: 1.5rem;
 }
-body > header h3 {
+body > header [role="title"] h3 {
   font-size: 1.2rem;
 }
 body > header [role="actions"],
 body > header nav,
-body > header menu,
-body > header [role="actions"] > ul,
-body > header nav > ul,
-body > header menu > ul {
+body > header menu {
   float: right;
 }
 body > header [role="actions"] *,
@@ -585,28 +582,43 @@ body > header nav a,
 body > header menu a {
   height: 100%;
 }
-body > header [role="actions"] .button,
-body > header nav .button,
-body > header menu .button,
-body > header [role="actions"] button,
-body > header nav button,
-body > header menu button,
-body > header [role="actions"] input,
-body > header nav input,
-body > header menu input {
+body > header .button,
+body > header button,
+body > header input[type="submit"],
+body > header input[type="reset"],
+body > header input[type="button"],
+body > header input[type="date"],
+body > header input[type="time"],
+body > header input[type="datetime"],
+body > header input[type="email"],
+body > header input[type="number"],
+body > header input[type="search"],
+body > header input[type="text"],
+body > header input[type="tel"],
+body > header input[type="url"],
+body > header input[type="password"] select {
   margin: 0;
-  height: 2.2rem;
-  padding: 0 0.5rem;
-  float: right;
+  height: 2rem;
+  padding: 0 0.2rem;
 }
-body > header [role="actions"] > button,
-body > header nav > button,
-body > header menu > button {
+body > header > button {
   margin-left: 1.5rem;
+}
+body > header:before,
+body > header:after {
+  content: " ";
+  display: table;
+}
+body > header:after {
+  clear: both;
 }
 body > header [role="title"] > button {
   border: none;
   background: transparent;
+}
+body > header [role="title"] h2,
+body > header [role="title"] h3 {
+  display: none;
 }
 body > header [role="actions"] > button {
   border: none;
@@ -635,11 +647,12 @@ body > aside {
   font-size: 1.3rem;
   position: fixed;
   z-index: 1000;
-  top: 6rem;
+  top: 5rem;
   left: 0;
   bottom: 0;
   padding: 1rem;
   width: 18rem;
+  background-color: #fff;
   transform: translateX(-100%);
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
   visibility: hidden;
@@ -1027,4 +1040,4 @@ table .fa {
     overflow: none;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=clay-light.css.map */
