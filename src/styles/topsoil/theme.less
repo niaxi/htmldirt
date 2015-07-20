@@ -1,24 +1,40 @@
 /* base coat */
 body {
-  background-color: @bg-color;
+  background-color: @canvas-color;
   color: @text-color;
 }
 
 body > header {
-  background: #333;
-  color: #aaa;
-  box-shadow: 0 0 .6em rgba(17, 17, 17, 0.3);
+  background: @primary-color;
+  box-shadow: 0 0 .6em @divider-color;
 }
 
 body > aside {
-  background: #222;
-  border-right: 2px solid #333;
+  background: @primary-color--muted;
+  border-right: 2px solid @divider-color;
 }
 
 
+a {
+  color: @link-color;
+
+  &:visited {
+    color: @link-color--visited;
+  }
+  &:active, &:hover {
+    outline: 0;
+  }
+  &:active {
+    color: @link-color--active;
+  }
+  &:hover {
+    color: @link-color--hover;
+  }
+}
+
 code {
-  background: @bg-color--subtle;
-  border: 1px solid @border-color--subtle;
+  background: @complementary-color;
+  border: 1px solid @divider-color;
 }
 
 

@@ -15,26 +15,43 @@ VARIABLES
 @font-family: @preferred-font,'Helvetica Neue',Helvetica,Arial,sans-serif;
 
 // colors
-@primary-color: #33c3f0;
-@secondary-color: #555;
+// background color
+@canvas-color: #FFFFFF;             
 
-@border-color: #bbb;
-@border-color--subtle: #333434;
-@border-color--loud: #E1E1E1;
+// brand
+@primary-color: #607D8B;
+@primary-color--loud: darken(@primary-color, 20%);
+@primary-color--subtle: lighten(@primary-color, 80%);
+@primary-color--muted: lighten(@primary-color, 90%);
 
-@bg-color: #242628;
-@bg-color--muted: #333;
-@bg-color--subtle: #111;
-@bg-color--loud: #F1F1F1;
+@complementary-color: #247BA0;
+@complementary-color--loud: darken(@complementary-color, 20%);
+@complementary-color--subtle: lighten(@complementary-color, 80%);
+@complementary-color--muted: lighten(@complementary-color, 90%);
 
-@text-color: #888;
-@text-color--subtle: #444;
-@text-color--loud: #bbb;
 
-@link-color: #3b8bba;
-@link-color--active: #0074d9;
-@link-color--hover: #0074d9;
-@link-color--visited: #999;
+// highlighed/accented content
+@accent-color: #3b8bba;
+@accent-color--loud: darken(@accent-color, 30%);
+@accent-color--subtle: lighten(@accent-color, 80%);
+@accent-color--muted: lighten(@accent-color, 90%);
+
+// call to action
+@positive-accent-color: @accent-color--loud;
+
+// call to action (but with caveat: e.g. delete)
+@negative-accent-color: #B2415C;
+
+
+@text-color: #333;
+@text-color--primary: @text-color;
+@text-color--secondary: lighten(@text-color, 23%);
+@text-color--subtle: lighten(@text-color, 80%);
+
+@link-color: @accent-color;
+@link-color--active: darken(@link-color, 20%);
+@link-color--hover: lighten(@link-color, 10%);
+@link-color--visited: lighten(@link-color, 20%);
 
 // misc
 @border-radius: 0;

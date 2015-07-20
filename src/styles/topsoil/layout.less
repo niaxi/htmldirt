@@ -16,7 +16,6 @@ Provides fixed area for application title and application level actions
   right: 0;
   height: 5rem;
   z-index: 1001;
-  background-color: #eee;
   padding: 1rem 1rem;
 }
 
@@ -36,8 +35,6 @@ Application level navigation
   bottom: 0;
   padding: 1rem;
   width: 18rem;
-
-  background-color: #fff;
 
   transform: translateX(-100%);
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
@@ -76,6 +73,8 @@ Example:
 
 // present body > aside as an app-bar
 body > header {
+  background-color: rgba(255, 255, 255, 0.93);
+
   .app-bar;
   .action-bar;
 
@@ -134,6 +133,8 @@ body > aside {
 main {
   display: block;
   padding: 6rem 1.5rem 1rem 1.5rem;
+  height: 90%;
+  overflow: auto;
 }
 
 
