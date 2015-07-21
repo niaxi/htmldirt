@@ -454,267 +454,80 @@ ol,
 form {
   margin-bottom: 2.5rem;
 }
-/* 
-================================================
-action-bar mixin
-================================================
-
-Has title area and action controls area
-
-action-bar
-  title
-  actions
-
-*/
-/* 
-================================================
-navigation-menu mixin
-================================================
-
-Application level navigation
-
-navigation-drawer
-  nav
-    section
-      items
-
-*/
-/* 
-================================================
-app-bar mixin
-================================================
-
-Provides fixed area for application title and application level actions
-*/
-/* 
-================================================
-navigation-drawer mixin
-================================================
-
-Application level navigation
-*/
-/* 
-================================================
-simple layout
-================================================
-
-Example:
-<body>
-  <header>       <-- app-bar + action-bar
-  </header>
-
-  <aside>        <-- navigation-drawer
-  </aside>
-  
-  <main>
-  </main>
-</body>  
-*/
-body > header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5rem;
-  z-index: 1001;
-  background-color: #eee;
-  padding: 1rem 1rem;
+/* baseline table */
+table {
+  width: 100%;
+  overflow: auto;
+  display: block;
 }
-body > header * {
-  font-size: 1.9rem;
-  line-height: 1.5;
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
+table th,
+table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
 }
-body > header [role="title"] h1,
-body > header [role="title"] h2,
-body > header [role="title"] h3,
-body > header [role="title"] h4,
-body > header [role="title"] h5,
-body > header [role="title"] h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+table th:first-child,
+table td:first-child {
+  padding-left: 0;
 }
-body > header [role="title"] h1 {
-  font-size: 2rem;
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
 }
-body > header [role="title"] h2 {
-  font-size: 1.5rem;
+/* baseline form */
+form > header {
+  margin-bottom: 1rem;
 }
-body > header [role="title"] h3 {
-  font-size: 1.2rem;
+form > footer {
+  margin-top: 2.5rem;
 }
-body > header [role="actions"],
-body > header nav,
-body > header menu {
-  float: right;
+form > div,
+form > header,
+form > footer {
+  margin-bottom: 1rem;
 }
-body > header [role="actions"] *,
-body > header nav *,
-body > header menu * {
-  font-size: 1.3rem;
-  line-height: 1rem;
-}
-body > header [role="actions"] ul,
-body > header nav ul,
-body > header menu ul,
-body > header [role="actions"] li,
-body > header nav li,
-body > header menu li {
-  list-style: none;
-  padding: 0;
-}
-body > header [role="actions"] ul,
-body > header nav ul,
-body > header menu ul {
-  margin-left: 1.4rem;
-  margin-bottom: 0;
-}
-body > header [role="actions"] li,
-body > header nav li,
-body > header menu li {
+form > div > label,
+form > header > label,
+form > footer > label {
   text-align: right;
-  margin: 0 0 0 0.8rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+  margin-right: 1rem;
 }
-body > header [role="actions"] a,
-body > header nav a,
-body > header menu a {
-  height: 100%;
+form > div > div,
+form > header > div,
+form > footer > div {
+  display: inline-block;
 }
-body > header .button,
-body > header button,
-body > header input[type="submit"],
-body > header input[type="reset"],
-body > header input[type="button"],
-body > header input[type="date"],
-body > header input[type="time"],
-body > header input[type="datetime"],
-body > header input[type="email"],
-body > header input[type="number"],
-body > header input[type="search"],
-body > header input[type="text"],
-body > header input[type="tel"],
-body > header input[type="url"],
-body > header input[type="password"] select {
-  margin: 0;
-  height: 2rem;
-  padding: 0 0.3rem;
-}
-body > header > button {
-  margin-left: 1.5rem;
-}
-body > header:before,
-body > header:after {
-  content: " ";
-  display: table;
-}
-body > header:after {
-  clear: both;
-}
-body > header [role="title"] > button {
+form fieldset {
+  padding-left: 0;
   border: none;
-  background: transparent;
+  border-top: 1px solid #aaa;
 }
-body > header [role="title"] h2,
-body > header [role="title"] h3 {
-  display: none;
+form fieldset legend {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #aaa;
 }
-body > header [role="actions"] > button {
-  border: none;
-  background: transparent;
+form label {
+  margin-right: 1rem;
 }
-body > header [role="actions"] > ul.overflow {
-  display: none;
+form label > input[type] {
+  margin: 0 0.5rem 0 0;
 }
-body > header [role="actions"][expanded] ul.overflow {
-  display: block;
-  top: 4rem;
-  right: 1rem;
-  position: fixed;
-  padding: 1rem;
-  font-size: 1.5rem;
-  background: #eee;
-  border-top: none;
-  width: 50%;
-  opacity: 0.9;
+form > label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+  margin-right: 1rem;
 }
-body > header [role="actions"][expanded] ul.overflow li {
-  display: block;
-  padding: 1rem;
-}
-body > aside {
-  font-size: 1.3rem;
-  position: fixed;
-  z-index: 1000;
-  top: 5rem;
-  left: 0;
-  bottom: 0;
-  padding: 1rem;
-  width: 18rem;
-  background-color: #fff;
-  transform: translateX(-100%);
-  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
-  visibility: hidden;
-}
-body > aside h3 {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  margin: 0;
-}
-body > aside ul,
-body > aside li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-body > aside ul {
-  margin-left: 1.9rem;
-}
-body > aside li {
-  margin-top: 0.2rem;
-}
-body > aside.off-screen {
-  transform: translateX(-100%);
-  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
-  visibility: hidden;
-}
-body > aside.show,
-body > aside.off-screen.show {
-  visibility: visible;
-  transform: translateX(0);
-}
-main {
-  display: block;
-  padding: 6rem 1.5rem 1rem 1.5rem;
-}
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  body {
-    display: table;
-    width: 100%;
-  }
-  body > header [role="title"] > button {
-    display: none;
-  }
-  body > header [role="actions"] > button {
-    display: none;
-  }
-  body > header [role="actions"] > ul,
-  body > header [role="actions"] > ul.overflow {
-    display: inline-block;
-  }
-  body > aside {
-    padding-top: 6rem;
-    position: inherit;
-    display: table-cell;
-    vertical-align: top;
-    visibility: inherit;
-    transform: inherit;
-  }
-  body > main {
-    display: table-cell;
-  }
+/* button -- primary */
+.button.button--primary,
+button.button--primary,
+input[type="submit"].button--primary,
+input[type="reset"].button--primary,
+input[type="button"].button--primary {
+  font-weight: bold;
 }
 html {
   font-size: 70.83%;
@@ -772,21 +585,7 @@ p {
 }
 a {
   background: transparent;
-  color: #3b8bba;
   text-decoration: none;
-}
-a:visited {
-  color: #999999;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
-a:active {
-  color: #0074d9;
-}
-a:hover {
-  color: #0074d9;
 }
 hr {
   height: 1px;
@@ -835,233 +634,254 @@ pre > code {
 }
 /* 
 ================================================
-place holder text
+action-bar mixin
 ================================================
+
+Has title area and action controls area
+
+action-bar
+  title
+  actions
+
 */
-/* input place holder text */
-::-webkit-input-placeholder {
-  color: #444444;
-}
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #444444;
-}
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #444444;
-}
-:-ms-input-placeholder {
-  color: #444444;
-}
 /* 
 ================================================
-containers
+navigation-menu mixin
 ================================================
+
+Application level navigation
+
+navigation-drawer
+  nav
+    section
+      items
+
 */
-form > div,
-form fieldset > div {
-  padding: 0;
-  margin: 0;
-  display: block;
-  margin-left: 1%;
-  margin-right: 1%;
-  vertical-align: top;
-}
-label,
-legend {
-  font-weight: normal;
-  margin-bottom: 0.5rem;
-}
-fieldset {
-  border: none;
-}
-legend {
-  padding: 0.2rem 0;
-  font-size: 2rem;
-  width: 100%;
-}
-form > footer {
-  margin-top: 3rem;
-}
 /* 
 ================================================
-buttons
+app-bar mixin
 ================================================
+
+Provides fixed area for application title and application level actions
 */
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  margin-right: 1rem;
-  text-align: center;
-  font-size: 1.8rem;
-  line-height: 1.6rem;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
-  box-sizing: border-box;
-}
 /* 
 ================================================
-buttons and input elements
+navigation-drawer mixin
 ================================================
+
+Application level navigation
 */
-.button,
-button,
-input,
-optgroup,
-select,
-textarea,
-fieldset {
-  margin-bottom: 1.5rem;
-}
-label > input[type="radio"],
-label > input[type="checkbox"] {
-  margin-bottom: 0.4rem;
-}
-input[type="date"],
-input[type="time"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea,
-select {
-  padding: 1.5px 3px;
-  height: 3.2rem;
-  width: 100%;
-  font-size: 2rem;
-}
-button[disabled],
-.button[disabled] input[type="submit"][disabled] input[type="reset"][disabled] input[type="button"][disabled] {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-textarea {
-  min-height: 10rem;
-}
-label {
-  display: inline-block;
-  margin-right: 1rem;
-}
-label input {
-  margin-left: 0.2rem;
-  margin-right: 0.3rem;
-}
-/* Larger than phablet */
-@media (min-width: 550px) {
-  form > div,
-  form fieldset > div {
-    width: 47%;
-    display: inline-block;
-    margin-left: 1.4%;
-    margin-right: 1%;
-  }
-}
-/* Larger than tablet */
-@media (min-width: 750px) {
-  form > div,
-  form fieldset > div {
-    width: 32.1%;
-    display: inline-block;
-    margin-left: 0.5%;
-    margin-right: 0.2%;
-  }
-}
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  form > div,
-  form fieldset > div {
-    width: 23%;
-    display: inline-block;
-    margin-left: 1%;
-    margin-right: 0.5%;
-  }
-  .button,
-  button,
-  input[type="submit"],
-  input[type="reset"],
-  input[type="button"] {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="search"],
-  input[type="text"],
-  input[type="tel"],
-  input[type="url"],
-  input[type="password"],
-  textarea,
-  select {
-    font-size: 1.6rem;
-    height: 3rem;
-  }
-}
-table {
-  width: 100%;
-  overflow: auto;
-  display: block;
-}
-table th,
-table td {
-  padding: 12px 15px;
-  text-align: left;
-}
-table th:first-child,
-table td:first-child {
-  padding-left: 0;
-}
-table th:last-child,
-table td:last-child {
-  padding-right: 0;
-}
-table .fa {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-}
-/* Larger than tablet */
-@media (min-width: 750px) {
-  table {
-    display: table;
-    overflow: none;
-  }
-}
-/* base coat */
-body {
-  background-color: #242628;
-  color: #888888;
-}
+/* 
+================================================
+simple layout
+================================================
+
+Example:
+<body>
+  <header>       <-- app-bar + action-bar
+  </header>
+
+  <aside>        <-- navigation-drawer
+  </aside>
+  
+  <main>
+  </main>
+</body>  
+*/
 body > header {
-  background: #333;
-  color: #aaa;
-  box-shadow: 0 0 0.6em rgba(17, 17, 17, 0.3);
+  background-color: rgba(255, 255, 255, 0.93);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  z-index: 1001;
+  padding: 1rem 1rem;
+}
+body > header * {
+  font-size: 1.9rem;
+  line-height: 1.5;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body > header [role="title"] h1,
+body > header [role="title"] h2,
+body > header [role="title"] h3,
+body > header [role="title"] h4,
+body > header [role="title"] h5,
+body > header [role="title"] h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body > header [role="title"] h1 {
+  font-size: 2rem;
+}
+body > header [role="title"] h2 {
+  font-size: 1.5rem;
+}
+body > header [role="title"] h3 {
+  font-size: 1.2rem;
+}
+body > header [role="actions"],
+body > header nav,
+body > header menu {
+  float: right;
+}
+body > header [role="actions"] *,
+body > header nav *,
+body > header menu * {
+  font-size: 1.3rem;
+  line-height: 1rem;
+}
+body > header [role="actions"] ul,
+body > header nav ul,
+body > header menu ul,
+body > header [role="actions"] li,
+body > header nav li,
+body > header menu li {
+  list-style: none;
+  padding: 0;
+}
+body > header [role="actions"] ul,
+body > header nav ul,
+body > header menu ul {
+  margin-left: 1.4rem;
+  margin-bottom: 0;
+}
+body > header [role="actions"] li,
+body > header nav li,
+body > header menu li {
+  text-align: right;
+  margin: 0 0 0 0.5rem;
+}
+body > header .button,
+body > header button,
+body > header input[type="submit"],
+body > header input[type="reset"],
+body > header input[type="button"],
+body > header input[type="date"],
+body > header input[type="time"],
+body > header input[type="datetime"],
+body > header input[type="email"],
+body > header input[type="number"],
+body > header input[type="search"],
+body > header input[type="text"],
+body > header input[type="tel"],
+body > header input[type="url"],
+body > header input[type="password"] select {
+  margin: 0;
+  height: 2rem;
+  padding: 0 0.3rem;
+  width: inherit;
+}
+body > header a {
+  height: 100%;
+  padding: 0.5rem 0.5rem;
+}
+body > header:before,
+body > header:after {
+  content: " ";
+  display: table;
+}
+body > header:after {
+  clear: both;
+}
+body > header [role="title"] h2,
+body > header [role="title"] h3 {
+  display: none;
+}
+body > header .toggle {
+  display: inline-block;
+}
+body > header ul.overflow {
+  display: none;
+}
+body > header [expanded] ul.overflow {
+  display: block;
+  top: 4rem;
+  right: 1rem;
+  position: fixed;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: #eee;
+  border-top: none;
+  width: 50%;
+  opacity: 0.9;
+}
+body > header [expanded] ul.overflow li {
+  display: block;
+  padding: 1rem;
 }
 body > aside {
-  background: #222;
-  border-right: 2px solid #333;
+  font-size: 1.3rem;
+  position: fixed;
+  z-index: 1000;
+  top: 5rem;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  width: 18rem;
+  transform: translateX(-100%);
+  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  visibility: hidden;
 }
-code {
-  background: #111111;
-  border: 1px solid #333434;
+body > aside h3 {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin: 0;
+}
+body > aside ul,
+body > aside li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body > aside ul {
+  margin-left: 1.9rem;
+}
+body > aside li {
+  margin-top: 0.2rem;
+}
+body > aside.off-screen {
+  transform: translateX(-100%);
+  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  visibility: hidden;
+}
+body > aside.show,
+body > aside.off-screen.show {
+  visibility: visible;
+  transform: translateX(0);
+}
+main {
+  display: block;
+  padding: 6rem 1.5rem 1rem 1.5rem;
+  height: 90%;
+  overflow: auto;
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {
+  body {
+    display: table;
+    width: 100%;
+  }
+  body > header [role="actions"] > ul,
+  body > header [role="actions"] > ul.overflow {
+    display: inline-block;
+  }
+  body > header .toggle {
+    display: none;
+  }
+  body > aside {
+    padding-top: 6rem;
+    position: inherit;
+    display: table-cell;
+    vertical-align: top;
+    visibility: inherit;
+    transform: inherit;
+  }
   body > main {
-    border-left: 2px solid #333434;
+    display: table-cell;
   }
 }
 /*# sourceMappingURL=clay-light.css.map */

@@ -79,43 +79,35 @@ body > header {
   .action-bar;
 
   [role="title"] {
-    &>button {
-      border: none;
-      background: transparent;
-    }
-
     h2, h3 {
       display: none;
     }
   }
 
-  [role="actions"] {
-    &>button {
-      border: none;
-      background: transparent;
-    } 
+  .toggle {
+    display: inline-block;
+  }
 
-    &>ul.overflow {
-      display: none;
-    }
+  ul.overflow {
+    display: none;
+  }
 
-    &[expanded] {
-      ul.overflow {
+  [expanded] {
+    ul.overflow {
+      display: block;
+      top: 4rem;
+      right: 1rem;
+      position: fixed;
+      padding: 1rem;
+      font-size: 1.5rem;
+      background: #eee;
+      border-top: none;
+      width: 50%;
+      opacity: 0.9;
+
+      li {
         display: block;
-        top: 4rem;
-        right: 1rem;
-        position: fixed;
         padding: 1rem;
-        font-size: 1.5rem;
-        background: #eee;
-        border-top: none;
-        width: 50%;
-        opacity: 0.9;
-
-        li {
-          display: block;
-          padding: 1rem;
-        }
       }
     }
   }
@@ -147,21 +139,14 @@ main {
   }
 
   body > header {
-
-    [role="title"] {
-      &>button {
-        display: none;
-      }
-    }
-
     [role="actions"]{
-      &>button {
-        display: none;
-      }
-
       &>ul, &>ul.overflow {
         display: inline-block;
       }
+    }
+
+    .toggle {
+      display: none;
     }
   }
 
