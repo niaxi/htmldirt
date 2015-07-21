@@ -58,9 +58,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   color: @alt-text-color--primary;
-  background-color: @accent-color;
   border-radius: @border-radius;
-  border: 1px solid @accent-color--subtle;
+  border: 1px solid @divider-color;
   .box-shadow;
 }
 
@@ -95,8 +94,8 @@ input[type="submit"].button--primary,
 input[type="reset"].button--primary,
 input[type="button"].button--primary {
   color: @text-color--primary;
-  background-color: transparent;
-  border-color: @divider-color; 
+  background-color: @accent-color;
+  border-color: @accent-color--subtle; 
 }
 .button.button--primary:hover,
 button.button--primary:hover,
@@ -109,8 +108,7 @@ input[type="submit"].button--primary:focus,
 input[type="reset"].button--primary:focus,
 input[type="button"].button--primary:focus {
   color: @text-color--primary;
-  background-color: transparent;
-  border-color: @divider-color; 
+  background-color: @accent-color--subtle;
 }
 
 .button--primary[disabled]
@@ -157,6 +155,21 @@ body > header {
 
   background: @primary-color;
   color: @alt-text-color;
+
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"],
+  textarea,
+  select {
+    color: @alt-text-color;
+  }
 
   a {
     color: @alt-text-color--primary;

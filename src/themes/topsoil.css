@@ -855,6 +855,30 @@ main {
     display: table-cell;
   }
 }
+table {
+  width: 100%;
+  overflow: auto;
+  display: block;
+}
+table th,
+table td {
+  border-bottom: 1px solid #b6b6b6;
+}
+table tbody td {
+  color: #333333;
+}
+table .fa {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+  table {
+    display: table;
+    overflow: none;
+  }
+}
 /* base coat */
 body {
   background-color: #ffffff;
@@ -900,9 +924,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   color: #ffffff;
-  background-color: #3b8bba;
   border-radius: 0;
-  border: 1px solid #ffffff;
+  border: 1px solid #b6b6b6;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
@@ -943,8 +966,8 @@ input[type="submit"].button--primary,
 input[type="reset"].button--primary,
 input[type="button"].button--primary {
   color: #333333;
-  background-color: transparent;
-  border-color: #b6b6b6;
+  background-color: #3b8bba;
+  border-color: #5da2cb;
 }
 .button.button--primary:hover,
 button.button--primary:hover,
@@ -957,8 +980,7 @@ input[type="submit"].button--primary:focus,
 input[type="reset"].button--primary:focus,
 input[type="button"].button--primary:focus {
   color: #333333;
-  background-color: transparent;
-  border-color: #b6b6b6;
+  background-color: #5da2cb;
 }
 .button--primary[disabled] .button.button--primary[disabled],
 button.button--primary[disabled],
@@ -1000,6 +1022,20 @@ body > header {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   background: #455a64;
+  color: #ffffff;
+}
+body > header input[type="date"],
+body > header input[type="time"],
+body > header input[type="datetime"],
+body > header input[type="email"],
+body > header input[type="number"],
+body > header input[type="search"],
+body > header input[type="text"],
+body > header input[type="tel"],
+body > header input[type="url"],
+body > header input[type="password"],
+body > header textarea,
+body > header select {
   color: #ffffff;
 }
 body > header a {
