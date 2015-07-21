@@ -1,56 +1,5 @@
-@import 'elements/action-bar';
-@import 'elements/navigation-menu';
-
-
-/* 
-================================================
-app-bar mixin
-================================================
-
-Provides fixed area for application title and application level actions
-*/
-.app-bar() {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5rem;
-  z-index: 1001;
-  padding: 1rem 1rem;
-}
-
-
-/* 
-================================================
-navigation-drawer mixin
-================================================
-
-Application level navigation
-*/
-.navigation-drawer() {
-  position: fixed;
-  z-index: 1000;
-  top: 5rem;
-  left: 0;
-  bottom: 0;
-  padding: 1rem;
-  width: 18rem;
-
-  transform: translateX(-100%);
-  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
-  visibility: hidden;
-
-  &.off-screen {
-    transform: translateX(-100%);
-    transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
-    visibility: hidden;
-  }
-  &.show, &.off-screen.show {
-    visibility: visible;
-    transform: translateX(0);
-  }
-}
-
+@import 'components/app-bar';
+@import 'components/navigation-drawer';
 
 
 /* 
@@ -73,10 +22,9 @@ Example:
 
 // present body > aside as an app-bar
 body > header {
-  background-color: rgba(255, 255, 255, 0.93);
-
   .app-bar;
-  .action-bar;
+
+  background-color: rgba(255, 255, 255, 0.93);
 
   [role="title"] {
     h2, h3 {
@@ -116,7 +64,6 @@ body > header {
 
 // present body > aside as navigation drawer
 body > aside {
-  .navigation-menu;
   .navigation-drawer;
 }
 

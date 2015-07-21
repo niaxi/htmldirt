@@ -1,0 +1,50 @@
+form {
+  & > header {
+    margin-bottom: 1rem;
+  }
+
+  & > footer {
+    margin-top: 2.5rem;
+  }
+
+  & > div,
+  & > header,
+  & > footer {
+    .aligned-fields;
+    margin-bottom: 1rem;
+    & > div {
+      display: inline-block;
+    }
+  }
+
+  fieldset {
+    padding-left: 0;
+    border: none;
+
+    legend {
+      width: 100%;
+      padding: 0.2rem 0.5rem;
+      border-bottom: 1px solid #aaa;
+    }
+  }
+
+  label {
+    margin-right: 1rem;
+
+    & > input[type] {
+      margin: 0 0.5rem 0 0;
+    }
+  }
+
+  .aligned-fields;
+}
+
+.aligned-fields() {
+  & > label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+    width: 10em;
+    margin-right: 1rem;
+  }
+}

@@ -2,8 +2,8 @@
 body {
   background-color: @canvas-color;
   color: @text-color;
+  font-family: @font-family;
 }
-
 
 
 a {
@@ -184,6 +184,9 @@ body > aside {
 
 /* Larger than desktop */
 @media (min-width: @bp-larger-than-desktop) {
+  body {
+    font-size: 1.5em;
+  }
 
   body > main {
     // border-left: 2px solid @divider-color;

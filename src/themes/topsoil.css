@@ -1,8 +1,3 @@
-/* 
-================================================
-VARIABLES
-================================================
-*/
 /* normalize is imported an inlined because of an issue with importing it in index.js 
 -- the import order is not maintained */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -454,88 +449,12 @@ ol,
 form {
   margin-bottom: 2.5rem;
 }
-/* baseline table */
-table {
-  width: 100%;
-  overflow: auto;
-  display: block;
-}
-table th,
-table td {
-  padding: 0.5rem 1rem;
-  text-align: left;
-}
-table th:first-child,
-table td:first-child {
-  padding-left: 0;
-}
-table th:last-child,
-table td:last-child {
-  padding-right: 0;
-}
-/* baseline form */
-form > header {
-  margin-bottom: 1rem;
-}
-form > footer {
-  margin-top: 2.5rem;
-}
-form > div,
-form > header,
-form > footer {
-  margin-bottom: 1rem;
-}
-form > div > label,
-form > header > label,
-form > footer > label {
-  text-align: right;
-  display: inline-block;
-  vertical-align: top;
-  width: 10em;
-  margin-right: 1rem;
-}
-form > div > div,
-form > header > div,
-form > footer > div {
-  display: inline-block;
-}
-form fieldset {
-  padding-left: 0;
-  border: none;
-  border-top: 1px solid #aaa;
-}
-form fieldset legend {
-  padding: 0.2rem 0.5rem;
-  border: 1px solid #aaa;
-}
-form label {
-  margin-right: 1rem;
-}
-form label > input[type] {
-  margin: 0 0.5rem 0 0;
-}
-form > label {
-  text-align: right;
-  display: inline-block;
-  vertical-align: top;
-  width: 10em;
-  margin-right: 1rem;
-}
-/* button -- primary */
-.button.button--primary,
-button.button--primary,
-input[type="submit"].button--primary,
-input[type="reset"].button--primary,
-input[type="button"].button--primary {
-  font-weight: bold;
-}
 html {
   font-size: 70.83%;
 }
 body {
   font-size: 1.85em;
   line-height: 1.6;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -626,47 +545,99 @@ pre > code {
   display: block;
   white-space: pre;
 }
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  body {
-    font-size: 1.5em;
-  }
+.button.button--primary,
+button.button--primary,
+input[type="submit"].button--primary,
+input[type="reset"].button--primary,
+input[type="button"].button--primary {
+  font-weight: bold;
+}
+form > header {
+  margin-bottom: 1rem;
+}
+form > footer {
+  margin-top: 2.5rem;
+}
+form > div,
+form > header,
+form > footer {
+  margin-bottom: 1rem;
+}
+form > div > label,
+form > header > label,
+form > footer > label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+  margin-right: 1rem;
+}
+form > div > div,
+form > header > div,
+form > footer > div {
+  display: inline-block;
+}
+form fieldset {
+  padding-left: 0;
+  border: none;
+}
+form fieldset legend {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  border-bottom: 1px solid #aaa;
+}
+form label {
+  margin-right: 1rem;
+}
+form label > input[type] {
+  margin: 0 0.5rem 0 0;
+}
+form > label {
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+  margin-right: 1rem;
+}
+table {
+  width: 100%;
+  overflow: auto;
+  display: block;
+}
+table th,
+table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+table th:first-child,
+table td:first-child {
+  padding-left: 0;
+}
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
 }
 /* 
 ================================================
-action-bar mixin
+VARIABLES
+================================================
+*/
+/* 
+================================================
+app-bar mixins
 ================================================
 
-Has title area and action controls area
+Provides fixed area for application title and application level actions
+
+app-bar -- is a action-bar
 
 action-bar
   title
   actions
-
 */
 /* 
 ================================================
-navigation-menu mixin
-================================================
-
-Application level navigation
-
-navigation-drawer
-  nav
-    section
-      items
-
-*/
-/* 
-================================================
-app-bar mixin
-================================================
-
-Provides fixed area for application title and application level actions
-*/
-/* 
-================================================
-navigation-drawer mixin
+navigation-drawer mixins
 ================================================
 
 Application level navigation
@@ -689,7 +660,6 @@ Example:
 </body>  
 */
 body > header {
-  background-color: rgba(255, 255, 255, 0.93);
   position: fixed;
   top: 0;
   left: 0;
@@ -697,6 +667,7 @@ body > header {
   height: 5rem;
   z-index: 1001;
   padding: 1rem 1rem;
+  background-color: rgba(255, 255, 255, 0.93);
 }
 body > header * {
   font-size: 1.9rem;
@@ -884,4 +855,177 @@ main {
     display: table-cell;
   }
 }
-/*# sourceMappingURL=clay-light.css.map */
+/* base coat */
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+a {
+  color: #3b8bba;
+}
+a:visited {
+  color: #83b8d8;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+a:active {
+  color: #22516d;
+}
+a:hover {
+  color: #5da2cb;
+}
+code {
+  background: #247ba0;
+  border: 1px solid #b6b6b6;
+}
+table th,
+table td {
+  border-bottom: 1px solid #b6b6b6;
+}
+table tbody td {
+  color: #333333;
+}
+legend {
+  border-bottom: 1px solid #b6b6b6;
+}
+form > div > label {
+  color: #6e6e6e;
+}
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  color: #ffffff;
+  background-color: #3b8bba;
+  border-radius: 0;
+  border: 1px solid #ffffff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+input,
+optgroup,
+select,
+textarea {
+  color: #333333;
+}
+.button,
+button,
+input,
+optgroup,
+select,
+textarea,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  border: 1px solid #b6b6b6;
+  background-color: transparent;
+  border-radius: 0;
+}
+.button.button--primary,
+button.button--primary,
+input[type="submit"].button--primary,
+input[type="reset"].button--primary,
+input[type="button"].button--primary {
+  color: #333333;
+  background-color: transparent;
+  border-color: #b6b6b6;
+}
+.button.button--primary:hover,
+button.button--primary:hover,
+input[type="submit"].button--primary:hover,
+input[type="reset"].button--primary:hover,
+input[type="button"].button--primary:hover,
+.button.button--primary:focus,
+button.button--primary:focus,
+input[type="submit"].button--primary:focus,
+input[type="reset"].button--primary:focus,
+input[type="button"].button--primary:focus {
+  color: #333333;
+  background-color: transparent;
+  border-color: #b6b6b6;
+}
+.button--primary[disabled] .button.button--primary[disabled],
+button.button--primary[disabled],
+input[type="submit"][disabled].button--primary,
+input[type="reset"][disabled].button--primary,
+input[type="button"][disabled].button--primary {
+  background-color: transparent;
+  border-color: #b6b6b6;
+}
+.button.button--primary[disabled]:hover,
+button.button--primary[disabled]:hover,
+input[type="submit"][disabled].button--primary:hover,
+input[type="reset"][disabled].button--primary:hover,
+input[type="button"][disabled].button--primary:hover,
+.button.button--primary[disabled]:focus,
+button.button--primary[disabled]:focus,
+input[type="submit"][disabled].button--primary:focus,
+input[type="reset"][disabled].button--primary:focus,
+input[type="button"][disabled].button--primary:focus {
+  background-color: transparent;
+  border-color: #b6b6b6;
+}
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #b6b6b6;
+  outline: 0;
+}
+body > header {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  background: #455a64;
+  color: #ffffff;
+}
+body > header a {
+  color: #ffffff;
+}
+body > header a:visited {
+  color: #ffffff;
+}
+body > header a:active,
+body > header a:hover {
+  outline: 0;
+}
+body > header a:active {
+  color: #e6e6e6;
+}
+body > header a:hover {
+  color: #cccccc;
+}
+body > aside {
+  background-color: #ffffff;
+  border-right: 1px solid #b6b6b6;
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=topsoil.css.map */

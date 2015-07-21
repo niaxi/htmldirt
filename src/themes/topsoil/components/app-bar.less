@@ -1,15 +1,29 @@
 /* 
 ================================================
-action-bar mixin
+app-bar mixins
 ================================================
 
-Has title area and action controls area
+Provides fixed area for application title and application level actions
+
+app-bar -- is a action-bar
 
 action-bar
   title
   actions
-
 */
+.app-bar() {
+  .action-bar;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  z-index: 1001;
+  padding: 1rem 1rem;
+}
+
+
 
 .action-bar() {
   * {
@@ -21,13 +35,13 @@ action-bar
   }
 
   [role="title"] {
-    .action-bar__title;
+    .app-title;
   }
 
   [role="actions"],
   nav, 
   menu {
-    .action-bar__actions;
+    .actions-area;
   }
 
   .button, 
@@ -61,7 +75,7 @@ action-bar
 }
 
 
-.action-bar__title() {
+.app-title() {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
@@ -80,7 +94,7 @@ action-bar
   }
 }
 
-.action-bar__actions() {
+.actions-area() {
   
   float: right;
 
