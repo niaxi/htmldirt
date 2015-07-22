@@ -1,6 +1,6 @@
 {
   "name": "htmldirt",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Grow custom responsive sites",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,12 @@
     "html",
     "template",
     "theme",
-    "custom"
+    "custom",
+    "less",
+    "css",
+    "invasive",
+    "modular",
+    "stylesheet"
   ],
   "author": "Ni Axi",
   "license": "ISC",
