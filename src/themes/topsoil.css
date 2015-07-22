@@ -545,12 +545,20 @@ pre > code {
   display: block;
   white-space: pre;
 }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  padding: 0 0.8rem;
+}
 .button.button--primary,
 button.button--primary,
 input[type="submit"].button--primary,
 input[type="reset"].button--primary,
 input[type="button"].button--primary {
   font-weight: bold;
+  padding: 0 0.8rem;
 }
 form > header {
   margin-bottom: 1rem;
@@ -670,7 +678,7 @@ body > header {
   background-color: rgba(255, 255, 255, 0.93);
 }
 body > header * {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   display: inline-block;
   margin-top: 0;
@@ -699,12 +707,6 @@ body > header nav,
 body > header menu {
   float: right;
 }
-body > header [role="actions"] *,
-body > header nav *,
-body > header menu * {
-  font-size: 1.3rem;
-  line-height: 1rem;
-}
 body > header [role="actions"] ul,
 body > header nav ul,
 body > header menu ul,
@@ -725,26 +727,6 @@ body > header nav li,
 body > header menu li {
   text-align: right;
   margin: 0 0 0 0.5rem;
-}
-body > header .button,
-body > header button,
-body > header input[type="submit"],
-body > header input[type="reset"],
-body > header input[type="button"],
-body > header input[type="date"],
-body > header input[type="time"],
-body > header input[type="datetime"],
-body > header input[type="email"],
-body > header input[type="number"],
-body > header input[type="search"],
-body > header input[type="text"],
-body > header input[type="tel"],
-body > header input[type="url"],
-body > header input[type="password"] select {
-  margin: 0;
-  height: 2rem;
-  padding: 0 0.3rem;
-  width: inherit;
 }
 body > header a {
   height: 100%;
@@ -785,7 +767,7 @@ body > header [expanded] ul.overflow li {
   padding: 1rem;
 }
 body > aside {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   position: fixed;
   z-index: 1000;
   top: 5rem;
@@ -797,9 +779,29 @@ body > aside {
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
   visibility: hidden;
 }
-body > aside h3 {
-  font-size: 1.4rem;
+body > aside h2 {
+  font-size: 1.7rem;
   line-height: 1.8;
+  margin: 0;
+}
+body > aside h3 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0;
+}
+body > aside h4 {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0;
+}
+body > aside h5 {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin: 0;
+}
+body > aside h6 {
+  font-size: 1.2rem;
+  line-height: 1.4;
   margin: 0;
 }
 body > aside ul,
@@ -824,11 +826,24 @@ body > aside.off-screen.show {
   visibility: visible;
   transform: translateX(0);
 }
+body > aside section,
+body > aside header,
+body > aside footer {
+  margin-bottom: 2rem;
+}
 main {
   display: block;
   padding: 6rem 1.5rem 1rem 1.5rem;
   height: 90%;
   overflow: auto;
+}
+h1 i,
+h2 i,
+h3 i,
+h4 i,
+h5 i,
+h6 i {
+  margin-right: 1rem;
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {
@@ -879,6 +894,91 @@ table .fa {
     overflow: none;
   }
 }
+.hd-swatches li {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #000;
+  margin-right: 0.5rem;
+}
+.hd-swatches .canvas-color {
+  background-color: #ffffff;
+}
+.hd-swatches .primary-color {
+  background-color: #607d8b;
+}
+.hd-swatches .primary-color--dark {
+  background-color: #41545e;
+}
+.hd-swatches .primary-color--light {
+  background-color: #99aeb8;
+}
+.hd-swatches .primary-color--muted {
+  background-color: #d5dee2;
+}
+.hd-swatches .complementary-color {
+  background-color: #455a64;
+}
+.hd-swatches .complementary-color--dark {
+  background-color: #263137;
+}
+.hd-swatches .complementary-color--light {
+  background-color: #728f9d;
+}
+.hd-swatches .complementary-color--muted {
+  background-color: #ccd7dc;
+}
+.hd-swatches .accent-color {
+  background-color: #03a9f4;
+}
+.hd-swatches .accent-color--dark {
+  background-color: #0275a8;
+}
+.hd-swatches .accent-color--light {
+  background-color: #60ccfd;
+}
+.hd-swatches .accent-color--muted {
+  background-color: #f7fcff;
+}
+.hd-swatches .positive-accent-color {
+  background-color: #0275a8;
+}
+.hd-swatches .negative-accent-color {
+  background-color: #b2415c;
+}
+.hd-swatches .text-color {
+  background-color: #333333;
+}
+.hd-swatches .text-color--secondary {
+  background-color: #808080;
+}
+.hd-swatches .text-color--subtle {
+  background-color: #b3b3b3;
+}
+.hd-swatches .alt-text-color {
+  background-color: #ffffff;
+}
+.hd-swatches .alt-text-color--secondary {
+  background-color: #cccccc;
+}
+.hd-swatches .alt-text-color--subtle {
+  background-color: #808080;
+}
+.hd-swatches .link-color {
+  background-color: #03a9f4;
+}
+.hd-swatches .link-color--active {
+  background-color: #02638f;
+}
+.hd-swatches .link-color--hover {
+  background-color: #2ebcfc;
+}
+.hd-swatches .link-color--visited {
+  background-color: #60ccfd;
+}
+.hd-swatches .divider-color {
+  background-color: #b6b6b6;
+}
 /* base coat */
 body {
   background-color: #ffffff;
@@ -886,23 +986,24 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 a {
-  color: #3b8bba;
+  color: #03a9f4;
 }
 a:visited {
-  color: #83b8d8;
+  color: #60ccfd;
 }
 a:active,
 a:hover {
   outline: 0;
 }
 a:active {
-  color: #22516d;
+  color: #02638f;
 }
 a:hover {
-  color: #5da2cb;
+  color: #2ebcfc;
 }
 code {
-  background: #247ba0;
+  color: #ffffff;
+  background: #41545e;
   border: 1px solid #b6b6b6;
 }
 table th,
@@ -916,7 +1017,7 @@ legend {
   border-bottom: 1px solid #b6b6b6;
 }
 form > div > label {
-  color: #6e6e6e;
+  color: #808080;
 }
 .button,
 button,
@@ -966,8 +1067,8 @@ input[type="submit"].button--primary,
 input[type="reset"].button--primary,
 input[type="button"].button--primary {
   color: #333333;
-  background-color: #3b8bba;
-  border-color: #5da2cb;
+  background-color: #03a9f4;
+  border-color: #60ccfd;
 }
 .button.button--primary:hover,
 button.button--primary:hover,
@@ -980,7 +1081,7 @@ input[type="submit"].button--primary:focus,
 input[type="reset"].button--primary:focus,
 input[type="button"].button--primary:focus {
   color: #333333;
-  background-color: #5da2cb;
+  background-color: #60ccfd;
 }
 .button--primary[disabled] .button.button--primary[disabled],
 button.button--primary[disabled],
@@ -1021,7 +1122,7 @@ select:focus {
 body > header {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  background: #455a64;
+  background: #607d8b;
   color: #ffffff;
 }
 body > header input[type="date"],
@@ -1049,10 +1150,10 @@ body > header a:hover {
   outline: 0;
 }
 body > header a:active {
-  color: #e6e6e6;
+  color: #cccccc;
 }
 body > header a:hover {
-  color: #cccccc;
+  color: #808080;
 }
 body > aside {
   background-color: #ffffff;

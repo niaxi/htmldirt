@@ -24,7 +24,8 @@ a {
 }
 
 code {
-  background: @complementary-color;
+  color: @alt-text-color;
+  background: @primary-color--dark;
   border: 1px solid @divider-color;
 }
 
@@ -35,7 +36,7 @@ table {
   }
 
   tbody td {
-    color: @text-color--primary;
+    color: @text-color;
   }
 }
 
@@ -57,14 +58,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  color: @alt-text-color--primary;
+  color: @alt-text-color;
   border-radius: @border-radius;
   border: 1px solid @divider-color;
   .box-shadow;
 }
 
 input, optgroup, select, textarea {
-  color: @text-color--primary;
+  color: @text-color;
 }
 .button, button, input, optgroup, select, textarea, fieldset {
   margin-bottom: 1.5rem;
@@ -93,9 +94,9 @@ button.button--primary,
 input[type="submit"].button--primary,
 input[type="reset"].button--primary,
 input[type="button"].button--primary {
-  color: @text-color--primary;
+  color: @text-color;
   background-color: @accent-color;
-  border-color: @accent-color--subtle; 
+  border-color: @accent-color--light; 
 }
 .button.button--primary:hover,
 button.button--primary:hover,
@@ -107,8 +108,8 @@ button.button--primary:focus,
 input[type="submit"].button--primary:focus,
 input[type="reset"].button--primary:focus,
 input[type="button"].button--primary:focus {
-  color: @text-color--primary;
-  background-color: @accent-color--subtle;
+  color: @text-color;
+  background-color: @accent-color--light;
 }
 
 .button--primary[disabled]
@@ -172,10 +173,10 @@ body > header {
   }
 
   a {
-    color: @alt-text-color--primary;
+    color: @alt-text-color;
 
     &:visited {
-      color: @alt-text-color--primary;
+      color: @alt-text-color;
     }
     &:active, &:hover {
       outline: 0;
