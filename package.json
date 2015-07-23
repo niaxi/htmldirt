@@ -1,6 +1,6 @@
 {
   "name": "htmldirt",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Grow custom responsive sites",
   "main": "index.js",
   "scripts": {
