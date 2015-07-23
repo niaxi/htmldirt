@@ -11,11 +11,9 @@
     "less:topsoil": "lessc --source-map src/less/topsoil.less dist/css/topsoil.css",
     "less:bluenight": "lessc --source-map src/less/bluenight.less dist/css/bluenight.css",
     "less:common": "lessc --source-map src/less/common-inline.less dist/css/common.css",
-    "less:watch": "onchange 'src/base/**/*.less' 'src/themes/**/*.less' -- npm run less:bluenight",
     "copy": "cp -r ./src/less ./dist/ && cp ./src/favicon.ico ./dist && npm run copy:fonts",
     "copy:fonts": "cp -r ./src/jspm_packages/npm/font-awesome@4.3.0/fonts ./dist/ ",
     "serve": "browser-sync start --no-open --no-notify --server src --files=src/**/*.html,src/**/*.less,src/**/*.css,src/**/*.js",
-    "startx": "npm run less:watch & npm run server",
     "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -43,16 +41,13 @@
   "devDependencies": {
     "html-dist": "^0.1.0",
     "jspm": "^0.15.7",
-    "less": "^2.5.1",
-    "onchange": "^1.1.0",
-    "watch": "^0.16.0"
+    "less": "^2.5.1"
   },
   "jspm": {
     "directories": {
       "baseURL": "src"
     },
     "dependencies": {
-      "css": "github:systemjs/plugin-css@^0.1.13",
       "font-awesome": "npm:font-awesome@^4.3.0",
       "normalize.css": "github:necolas/normalize.css@^3.0.3"
     },
