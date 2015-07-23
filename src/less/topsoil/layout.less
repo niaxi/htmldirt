@@ -1,0 +1,118 @@
+@import 'components/app-bar';
+@import 'components/navigation-drawer';
+
+
+/* 
+================================================
+simple layout
+================================================
+
+Example:
+<body>
+  <header>       <-- app-bar + action-bar
+  </header>
+
+  <aside>        <-- navigation-drawer
+  </aside>
+  
+  <main>
+  </main>
+</body>  
+*/
+
+// present body > aside as an app-bar
+body > header {
+  .app-bar;
+
+  background-color: rgba(255, 255, 255, 0.93);
+
+  [role="title"] {
+    h2, h3 {
+      display: none;
+    }
+  }
+
+  .toggle {
+    display: inline-block;
+  }
+
+  ul.overflow {
+    display: none;
+  }
+
+  [expanded] {
+    ul.overflow {
+      display: block;
+      top: 4rem;
+      right: 1rem;
+      position: fixed;
+      padding: 1rem;
+      font-size: 1.5rem;
+      background: #eee;
+      border-top: none;
+      width: 50%;
+      opacity: 0.9;
+
+      li {
+        display: block;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+
+// present body > aside as navigation drawer
+body > aside {
+  .navigation-drawer;
+}
+
+
+// style main content area
+main {
+  display: block;
+  padding: 6rem 1.5rem 1rem 1.5rem;
+  height: 90%;
+  overflow: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  i {
+    margin-right: 1rem;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+
+  body {
+    display: table;
+    width: 100%;
+  }
+
+  body > header {
+    [role="actions"]{
+      &>ul, &>ul.overflow {
+        display: inline-block;
+      }
+    }
+
+    .toggle {
+      display: none;
+    }
+  }
+
+  body > aside {
+    padding-top: 6rem;
+    position: inherit;
+    display: table-cell;
+    vertical-align: top;
+    visibility: inherit;
+    transform: inherit;
+  }
+
+  body > main {
+    display: table-cell;
+  }
+}

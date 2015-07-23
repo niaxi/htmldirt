@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  overflow: auto;
+  display: block;
+
+  th,
+  td {
+    border-bottom: 1px solid @divider-color;
+  }
+
+  tbody td {
+    color: @text-color;
+  }
+
+  .fa {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+
+/* Larger than tablet */
+@media (min-width: @bp-larger-than-tablet) {
+  table {
+    display: table;
+    overflow: none;
+  }
+}

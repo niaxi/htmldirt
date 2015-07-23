@@ -1,0 +1,96 @@
+/* 
+================================================
+app-bar mixins
+================================================
+
+Provides fixed area for application title and application level actions
+
+app-bar -- is a action-bar
+
+action-bar
+  title
+  actions
+*/
+.app-bar() {
+  .action-bar;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  z-index: 1001;
+  padding: 1rem 1rem;
+}
+
+
+
+.action-bar() {
+  * {
+    font-size: 1.5rem; 
+    line-height: 1.5;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  [role="title"] {
+    .app-title;
+  }
+
+  [role="actions"],
+  nav, 
+  menu {
+    .actions-area;
+  }
+
+  a {
+    height: 100%;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .clearfix;
+}
+
+
+.app-title() {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.actions-area() {
+  
+  float: right;
+
+  // * {
+  //   font-size: 1.3rem;
+  //   line-height: 1rem;
+  // }
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+  }
+  ul {
+    margin-left: 1.4rem;
+    margin-bottom: 0;
+  }
+  li {
+    text-align: right;
+    margin: 0 0 0 0.5rem;
+  }
+}
