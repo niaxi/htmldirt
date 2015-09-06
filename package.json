@@ -44,6 +44,7 @@
     "less": "^2.5.1"
   },
   "jspm": {
+    "registry": "jspm",
     "directories": {
       "baseURL": "src"
     },
