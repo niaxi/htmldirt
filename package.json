@@ -40,7 +40,7 @@
   "homepage": "https://github.com/niaxi/htmldirt",
   "devDependencies": {
     "html-dist": "^0.1.0",
-    "jspm": "^0.15.7",
+    "jspm": "^0.16.2",
     "less": "^2.5.1"
   },
   "jspm": {
