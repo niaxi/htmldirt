@@ -12,7 +12,7 @@
     "less:bluenight": "lessc --source-map src/less/bluenight.less dist/css/bluenight.css",
     "less:common": "lessc --source-map src/less/common-inline.less dist/css/common.css",
     "copy": "cp -r ./src/less ./dist/ && cp ./src/favicon.ico ./dist && npm run copy:fonts",
-    "copy:fonts": "cp -r ./src/jspm_packages/npm/font-awesome@4.3.0/fonts ./dist/ ",
+    "copy:fonts": "cp -r ./src/jspm_packages/npm/font-awesome@4.4.0/fonts ./dist/ ",
     "serve": "browser-sync start --no-open --no-notify --server src --files=src/**/*.html,src/**/*.less,src/**/*.css,src/**/*.js",
     "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -48,7 +48,7 @@
       "baseURL": "src"
     },
     "dependencies": {
-      "font-awesome": "npm:font-awesome@^4.3.0",
+      "font-awesome": "npm:font-awesome@^4.4.0",
       "normalize.css": "github:necolas/normalize.css@^3.0.3"
     },
     "devDependencies": {
