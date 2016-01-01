@@ -1,19 +1,19 @@
 /* 
 ================================================
-app-bar mixins
+app-bar component
 ================================================
 
 Provides fixed area for application title and application level actions
 
-app-bar -- is a action-bar
-
-action-bar
-  title
-  actions
+.app-bar
+  .app-title
+  .common-actions
 */
-.app-bar() {
-  .action-bar;
-  
+
+.app-bar {
+  display: flex;
+  flex-flow: row;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -21,39 +21,24 @@ action-bar
   height: 5rem;
   z-index: 1001;
   padding: 1rem 1rem;
-}
 
+  background-color: rgba(255, 255, 255, 0.93);
 
-
-.action-bar() {
-  * {
-    font-size: 1.5rem; 
-    line-height: 1.5;
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  [role="title"] {
-    .app-title;
-  }
-
-  [role="actions"],
-  nav, 
-  menu {
-    .actions-area;
-  }
+  font-size: 1.5rem; 
+  line-height: 1.5;
 
   a {
     height: 100%;
     padding: 0.5rem 0.5rem;
   }
-
-  .clearfix;
 }
 
 
-.app-title() {
+.app-title {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
@@ -72,14 +57,13 @@ action-bar
   }
 }
 
-.actions-area() {
-  
-  float: right;
 
-  // * {
-  //   font-size: 1.3rem;
-  //   line-height: 1rem;
-  // }
+.common-actions {
+  display: flex;
+  flex-flow: row;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
 
   ul, li {
     list-style: none;
@@ -93,4 +77,52 @@ action-bar
     text-align: right;
     margin: 0 0 0 0.5rem;
   }
+}
+
+
+.common-actions__overflow {
+  display: none;
+}
+
+
+.common-actions.is-expanded {
+  .common-actions__overflow {
+    display: flex;
+    flex-flow: column;
+
+    top: 5rem;
+    right: 1rem;
+    position: fixed;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: rgba(20, 20, 20, 0.6);
+    border-top: none;
+    width: 100%;
+    opacity: 0.9;
+
+    li {
+      padding: 0.5rem;
+    }
+  }
+}
+
+
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+
+  .app-title__toggle {
+    display: none;
+  }
+
+  .common-actions.is-expanded {
+    .common-actions__overflow {
+      width: 50%;
+    }
+  }
+
+  .common-actions__toggle {
+    display: none;
+  }
+
 }

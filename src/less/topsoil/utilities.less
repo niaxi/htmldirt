@@ -10,7 +10,11 @@
   }
 }
 
-.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+.box-shadow( @shadow: 0 1px 3px rgba(0,0,0,.25) ) {
   -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
   box-shadow: @shadow;
+}
+
+.debug( @color:#eee, @size:1px ) {
+  outline: @size solid @color;
 }

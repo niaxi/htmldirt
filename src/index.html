@@ -24,336 +24,338 @@
     <script src="lib/less.js" type="text/javascript"></script>
   </head>
 
-  <body>
+  <body class="app">
 
-    <header>
+    <header class="app-bar">
 
-      <div role="title">
-        <a href="#" class="toggle toggle-navigation-drawer fa fa-bars"></a>
+      <div class="app-title">
+        <a href="#" class="app-title__toggle fa fa-bars"></a>
         <h1>HTMLdirt</h1>
-        <h2>Grow custom responsive sites</h2>
       </div>
 
-      <div role="actions">
+      <div class="common-actions">
 
         <ul>
-            <li><input type="search" /></li>
+            <!-- <li><input type="search" /></li> -->
             <li><button class="button--primary">Save</button></li>
             <li><button>Cancel</button></li>
         </ul>
 
-        <ul class="overflow">
+        <ul class="common-actions__overflow">
             <li><a href="#">Elsewhere</a></li>
             <li><a href="#">Another place</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
 
-        <a href="#" class="toggle toggle-overflow fa fa-ellipsis-v"></a>
+        <a href="#" class="common-actions__toggle fa fa-ellipsis-v"></a>
 
       </div>
 
     </header>
 
-
-    <aside>
-
-      <nav>
-        <section>
-          <h3><i class="fa fa-user"></i> My Account</h3>
-          <ul>
-            <li><a href="#/account/preferences">Preferences</a></li>
-            <li><a href="#/account/profile">Profile</a></li>
-          </ul>
-        </section>
-
-        <footer>
-          <h3><i class="fa fa-paint-brush"></i>Colors</h3>
-
-          <div class="hd-swatches">
-            <h4>canvas</h4>
-            <ul>
-              <li class="canvas-color" title="canvas-color"></li>
-            </ul>
-
-            <h4>primary</h4>
-            <ul>
-              <li class="primary-color" title="primary-color"></li>
-              <li class="primary-color--dark" title="primary-color--dark"></li>
-              <li class="primary-color--light" title="primary-color--light"></li>
-              <li class="primary-color--muted" title="primary-color--muted"></li>
-            </ul>
-
-            <h4>complementary</h4>
-            <ul>
-              <li class="complementary-color" title="complementary-color"></li>
-              <li class="complementary-color--dark" title="complementary-color--dark"></li>
-              <li class="complementary-color--light" title="complementary-color--light"></li>
-              <li class="complementary-color--muted" title="complementary-color--muted"></li>
-            </ul>
-
-            <h4>accent</h4>
-            <ul>
-              <li class="accent-color" title="accent-color"></li>
-              <li class="accent-color--dark" title="accent-color--dark"></li>
-              <li class="accent-color--light" title="accent-color--light"></li>
-              <li class="accent-color--muted" title="accent-color--muted"></li>
-            </ul>
-            <ul>
-              <li class="positive-accent-color" title="positive-accent-color"></li>
-              <li class="negative-accent-color" title="negative-accent-color"></li>
-            </ul>
-
-            <h4>text</h4>
-            <ul>
-              <li class="text-color" title="text-color"></li>
-              <li class="text-color--secondary" title="text-color--secondary"></li>
-              <li class="text-color--subtle" title="text-color--subtle"></li>
-            </ul>
-
-            <h4>alt text</h4>
-            <ul>
-              <li class="alt-text-color" title="alt-text-color"></li>
-              <li class="alt-text-color--secondary" title="alt-text-color--secondary"></li>
-              <li class="alt-text-color--subtle" title="alt-text-color--subtle"></li>
-            </ul>
-
-            <h4>link</h4>
-            <ul>
-              <li class="link-color" title="link-color"></li>
-              <li class="link-color--active" title="link-color--active"></li>
-              <li class="link-color--hover" title="link-color--hover"></li>
-              <li class="link-color--visited" title="link-color--visited"></li>
-            </ul>
-
-            <h4>divider</h4>
-            <ul>
-              <li class="divider-color" title="divider-color"></li>
-            </ul>
-          </div>
-        </footer>
-      </nav>
-
-    </aside>
-
     <main>
 
-      <h1>Start here</h1>
-      <div>
-        <p>Then go your own <a href="" title="gets you now here">way</a>!</p>      
-      </div>
+      <aside class="navigation-drawer">
 
+        <nav>
+          <section>
+            <h3><i class="fa fa-user"></i> My Account</h3>
+            <ul>
+              <li><a href="#/account/preferences">Preferences</a></li>
+              <li><a href="#/account/profile">Profile</a></li>
+            </ul>
+          </section>
 
-      <h2>Form</h2>
+          <footer>
+            <h3><i class="fa fa-paint-brush"></i>Colors</h3>
 
-      <form>
-        <fieldset>
-          <legend>Book Info</legend>
-          <img src="http://placehold.it/105x100" class="photo" width="105" height="100">
-          <div>Summary content here</div>
-        </fieldset>
+            <div class="hd-swatches">
+              <h4>canvas</h4>
+              <ul>
+                <li class="canvas-color" title="canvas-color"></li>
+              </ul>
 
+              <h4>primary</h4>
+              <ul>
+                <li class="primary-color" title="primary-color"></li>
+                <li class="primary-color--dark" title="primary-color--dark"></li>
+                <li class="primary-color--light" title="primary-color--light"></li>
+                <li class="primary-color--muted" title="primary-color--muted"></li>
+              </ul>
+
+              <h4>complementary</h4>
+              <ul>
+                <li class="complementary-color" title="complementary-color"></li>
+                <li class="complementary-color--dark" title="complementary-color--dark"></li>
+                <li class="complementary-color--light" title="complementary-color--light"></li>
+                <li class="complementary-color--muted" title="complementary-color--muted"></li>
+              </ul>
+
+              <h4>accent</h4>
+              <ul>
+                <li class="accent-color" title="accent-color"></li>
+                <li class="accent-color--dark" title="accent-color--dark"></li>
+                <li class="accent-color--light" title="accent-color--light"></li>
+                <li class="accent-color--muted" title="accent-color--muted"></li>
+              </ul>
+              <ul>
+                <li class="positive-accent-color" title="positive-accent-color"></li>
+                <li class="negative-accent-color" title="negative-accent-color"></li>
+              </ul>
+
+              <h4>text</h4>
+              <ul>
+                <li class="text-color" title="text-color"></li>
+                <li class="text-color--secondary" title="text-color--secondary"></li>
+                <li class="text-color--subtle" title="text-color--subtle"></li>
+              </ul>
+
+              <h4>alt text</h4>
+              <ul>
+                <li class="alt-text-color" title="alt-text-color"></li>
+                <li class="alt-text-color--secondary" title="alt-text-color--secondary"></li>
+                <li class="alt-text-color--subtle" title="alt-text-color--subtle"></li>
+              </ul>
+
+              <h4>link</h4>
+              <ul>
+                <li class="link-color" title="link-color"></li>
+                <li class="link-color--active" title="link-color--active"></li>
+                <li class="link-color--hover" title="link-color--hover"></li>
+                <li class="link-color--visited" title="link-color--visited"></li>
+              </ul>
+
+              <h4>divider</h4>
+              <ul>
+                <li class="divider-color" title="divider-color"></li>
+              </ul>
+            </div>
+          </footer>
+        </nav>
+
+      </aside>
+
+      <article class="active-view">
+
+        <h1>Start here</h1>
         <div>
-          <label>Title</label>
-          <input type="text" />
+          <p>Then go your own <a href="" title="gets you now here">way</a>!</p>      
         </div>
 
-        <div>
-          <label>ISBN</label>
-          <input type="text" />
-        </div>
 
-        <div>
-          <label>Author Name</label>
-          <input type="text" />
-        </div>
+        <h2>Form</h2>
 
-        <div>
-          <label>Publish Date</label>
-          <input type="date" />
-        </div>
+        <form>
+          <fieldset>
+            <legend>Book Info</legend>
+            <img src="http://placehold.it/105x100" class="photo" width="105" height="100">
+            <div>Summary content here</div>
+          </fieldset>
 
-        <div>
-          <label>Synopsis</label>
-          <input type="text" />
-        </div>
-
-        <div>
-          <label>Cover</label>
-          <select>
-            <option></option>
-            <option selected>Hard cover</option>
-            <option>Soft cover</option>
-          </select>
-        </div>
-
-        <div>
-          <label>Details</label>
-          <textarea placeholder="Some details" rows="5"></textarea>
-        </div>
-
-        <div>
-          <label>Preface</label>
-          <input type="text" />
-        </div>
-
-        <div>
-          <label>Genre</label>
           <div>
-            <label><input type="checkbox" name="genre"/>Drama</label>
-            <label><input type="checkbox" name="genre" />Comedy</label>
-            <label><input type="checkbox" name="genre" />Action</label>
-            <label><input type="checkbox" name="genre" />Thriller</label>
+            <label>Title</label>
+            <input type="text" />
           </div>
-        </div>
 
-        <div>
-          <label>Rating</label>
           <div>
-            <label><input type="radio" name="rating" />Must read</label>
-            <label><input type="radio" name="rating" />Recommended</label>
-            <label><input type="radio" name="rating" />Consider</label>
-            <label><input type="radio" name="rating" />Pass</label>
+            <label>ISBN</label>
+            <input type="text" />
           </div>
-        </div>
 
-        <footer>
-          <label></label>
-          <button class="button--primary">Save</button>
-          <button>Cancel</button>
-        </footer>
-      </form>
+          <div>
+            <label>Author Name</label>
+            <input type="text" />
+          </div>
 
+          <div>
+            <label>Publish Date</label>
+            <input type="date" />
+          </div>
 
-      <h2>Table</h2>
+          <div>
+            <label>Synopsis</label>
+            <input type="text" />
+          </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Publish Date</th>
-            <th>Genre</th>
-            <th>Page Count</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tenjis Can</td>
-            <td>Francesca Po</td>
-            <td>2012-06-12</td>
-            <td>Drama</td>
-            <td>304</td>
-            <td>
-              <i class="fa fa-pencil-square-o"></i>
-              <i class="fa fa-trash-o"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>The Joker and the Frock</td>
-            <td>Geoffery Duglas</td>
-            <td>1983-04-21</td>
-            <td>Thriller</td>
-            <td>102</td>
-            <td>
-              <i class="fa fa-pencil-square-o"></i>
-              <i class="fa fa-trash-o"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>Pointy's Guide</td>
-            <td>Spinner Tale</td>
-            <td>1963-03-02</td>
-            <td>Thriller</td>
-            <td>90</td>
-            <td>
-              <i class="fa fa-pencil-square-o"></i>
-              <i class="fa fa-trash-o"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>Spinning Heads</td>
-            <td>Uerrey Kraken</td>
-            <td>1997-03-19</td>
-            <td>Comedy</td>
-            <td>65</td>
-            <td>
-              <i class="fa fa-pencil-square-o"></i>
-              <i class="fa fa-trash-o"></i>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <div>
+            <label>Cover</label>
+            <select>
+              <option></option>
+              <option selected>Hard cover</option>
+              <option>Soft cover</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Details</label>
+            <textarea placeholder="Some details" rows="5"></textarea>
+          </div>
+
+          <div>
+            <label>Preface</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label>Genre</label>
+            <div>
+              <label><input type="checkbox" name="genre"/>Drama</label>
+              <label><input type="checkbox" name="genre" />Comedy</label>
+              <label><input type="checkbox" name="genre" />Action</label>
+              <label><input type="checkbox" name="genre" />Thriller</label>
+            </div>
+          </div>
+
+          <div>
+            <label>Rating</label>
+            <div>
+              <label><input type="radio" name="rating" />Must read</label>
+              <label><input type="radio" name="rating" />Recommended</label>
+              <label><input type="radio" name="rating" />Consider</label>
+              <label><input type="radio" name="rating" />Pass</label>
+            </div>
+          </div>
+
+          <footer>
+            <label></label>
+            <button class="button--primary">Save</button>
+            <button>Cancel</button>
+          </footer>
+        </form>
 
 
-      <h2>Typography</h2>
+        <h2>Table</h2>
 
-      <h3>Paragraphs</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Publish Date</th>
+              <th>Genre</th>
+              <th>Page Count</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tenjis Can</td>
+              <td>Francesca Po</td>
+              <td>2012-06-12</td>
+              <td>Drama</td>
+              <td>304</td>
+              <td>
+                <i class="fa fa-pencil-square-o"></i>
+                <i class="fa fa-trash-o"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>The Joker and the Frock</td>
+              <td>Geoffery Duglas</td>
+              <td>1983-04-21</td>
+              <td>Thriller</td>
+              <td>102</td>
+              <td>
+                <i class="fa fa-pencil-square-o"></i>
+                <i class="fa fa-trash-o"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Pointy's Guide</td>
+              <td>Spinner Tale</td>
+              <td>1963-03-02</td>
+              <td>Thriller</td>
+              <td>90</td>
+              <td>
+                <i class="fa fa-pencil-square-o"></i>
+                <i class="fa fa-trash-o"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Spinning Heads</td>
+              <td>Uerrey Kraken</td>
+              <td>1997-03-19</td>
+              <td>Comedy</td>
+              <td>65</td>
+              <td>
+                <i class="fa fa-pencil-square-o"></i>
+                <i class="fa fa-trash-o"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis est rhoncus, 
-      aliquet massa ut, molestie ex. In pellentesque venenatis sagittis. Proin fringilla et ligula 
-      quis tristique. Vivamus a risus eget arcu convallis pharetra quis nec turpis. Aenean euismod 
-      vehicula erat sed luctus.</p>
 
-      <h3>Lists</h3>
+        <h2>Typography</h2>
 
-      <h4>Unordered Lists</h4>
+        <h3>Paragraphs</h3>
 
-      <ul>
-        <li>Unordered lists have basic styles</li>
-        <li>
-          They use the circle list style
-          <ul>
-            <li>Nested lists styled to feel right</li>
-            <li>Can nest either type of list into the other</li>
-          </ul>
-        </li>
-        <li>Just more list items mama san</li>
-      </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis est rhoncus, 
+        aliquet massa ut, molestie ex. In pellentesque venenatis sagittis. Proin fringilla et ligula 
+        quis tristique. Vivamus a risus eget arcu convallis pharetra quis nec turpis. Aenean euismod 
+        vehicula erat sed luctus.</p>
 
-      <h4>Ordered Lists</h4>
+        <h3>Lists</h3>
 
-      <ol>
-        <li>Ordered lists also have basic styles</li>
-        <li>
-          They use the decimal list style
-          <ol>
-            <li>Nested ordered list item</li>
-            <li>Another list item, nested</li>
-          </ol>
-        </li>
-        <li>
-          They use the decimal list style
-          <ul>
-            <li>Ordered and unordered can be nested</li>
-            <li>Can nest either type of list into the other</li>
-          </ul>
-        </li>
-        <li>Last list item just for the fun</li>
-      </ol>
+        <h4>Unordered Lists</h4>
+
+        <ul>
+          <li>Unordered lists have basic styles</li>
+          <li>
+            They use the circle list style
+            <ul>
+              <li>Nested lists styled to feel right</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Just more list items mama san</li>
+        </ul>
+
+        <h4>Ordered Lists</h4>
+
+        <ol>
+          <li>Ordered lists also have basic styles</li>
+          <li>
+            They use the decimal list style
+            <ol>
+              <li>Nested ordered list item</li>
+              <li>Another list item, nested</li>
+            </ol>
+          </li>
+          <li>
+            They use the decimal list style
+            <ul>
+              <li>Ordered and unordered can be nested</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Last list item just for the fun</li>
+        </ol>
 
 
-      <h3>Code</h3>
+        <h3>Code</h3>
 
-      <pre>
-        <code>
-  .some-class {
-    background-color: red;
-  }
-        </code>
-      </pre>
+        <pre>
+          <code>
+    .some-class {
+      background-color: red;
+    }
+          </code>
+        </pre>
 
-      <h3>Almost done</h3>
+        <h3>Almost done</h3>
 
-      <blockquote>
-        Below is a dividing line -- an hr. This is a quote
+        <blockquote>
+          Below is a dividing line -- an hr. This is a quote
 
-        <cite>Amonynus</cite>
-      </blockquote>
+          <cite>Amonynus</cite>
+        </blockquote>
 
-      <hr />
+        <hr />
 
-      <p>Did you see the &lt;hr /&gt; up there?</p>
+        <p>Did you see the &lt;hr /&gt; up there?</p>
+      </article>
+      
     </main>
     
 

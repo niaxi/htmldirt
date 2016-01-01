@@ -5,7 +5,7 @@ navigation-drawer mixins
 
 Application level navigation
 */
-.navigation-drawer() {
+.navigation-drawer {
   .navigation-menu;
   
   position: fixed;
@@ -82,4 +82,14 @@ Application level navigation
   li {
     margin-top: 0.2rem;
   }
+}
+
+
+/* Larger than desktop */
+@media (min-width: @bp-larger-than-desktop) {
+
+  .navigation-drawer { 
+     position: static;
+  }
+
 }
