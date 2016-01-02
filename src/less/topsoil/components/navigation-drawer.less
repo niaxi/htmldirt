@@ -11,21 +11,20 @@ Application level navigation
   position: fixed;
   z-index: 1000;
   top: 5rem;
-  left: 0;
-  bottom: 0;
-  padding: 1rem;
+  // left: 0;
+  // bottom: 0;
+  padding: 0.5rem;
   width: 18rem;
 
   transform: translateX(-100%);
-  transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
   visibility: hidden;
 
-  &.off-screen {
+  &.is-off-screen {
     transform: translateX(-100%);
     transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
     visibility: hidden;
   }
-  &.show, &.off-screen.show {
+  &.is-visible, &.is-off-screen.is-visible {
     visibility: visible;
     transform: translateX(0);
   }
@@ -89,7 +88,10 @@ Application level navigation
 @media (min-width: @bp-larger-than-desktop) {
 
   .navigation-drawer { 
-     position: static;
+    position: static;
+    width: 18rem;
+    visibility: visible;
+    transform: translateX(0);
   }
 
 }
