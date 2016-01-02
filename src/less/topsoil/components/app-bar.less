@@ -68,17 +68,21 @@ Provides fixed area for application title and application level actions
   ul, li {
     list-style: none;
     padding: 0;
-  }
-  ul {
-    margin-left: 1.4rem;
-    margin-bottom: 0;
-  }
-  li {
+    margin: 0;
     text-align: right;
-    margin: 0 0 0 0.5rem;
   }
 }
 
+
+.common-actions__priority {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  li {
+    display: inline-block;  
+  }
+}
 
 .common-actions__overflow {
   display: none;
@@ -91,11 +95,11 @@ Provides fixed area for application title and application level actions
     flex-flow: column;
 
     top: 5rem;
-    right: 1rem;
+    right: 0;
     position: fixed;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: rgba(20, 20, 20, 0.6);
+    background-color: rgba(50, 50, 50, 0.95);
     border-top: none;
     width: 100%;
     opacity: 0.9;
@@ -118,6 +122,16 @@ Provides fixed area for application title and application level actions
   .common-actions.is-expanded {
     .common-actions__overflow {
       width: 50%;
+    }
+  }
+
+  .common-actions__overflow {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    li {
+      display: inline-block;  
     }
   }
 
