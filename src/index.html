@@ -29,26 +29,29 @@
     <header class="app-bar">
 
       <div class="app-title">
-        <a href="#" class="app-title__toggle fa fa-bars"></a>
-        <h1>HTMLdirt</h1>
+        <ul class="app-actions">
+          <li><a href="#" class="icon app-actions__toggle fa fa-bars"></a></li>
+          <li><h1>HTMLdirt</h1></li>
+        </ul>
       </div>
 
-      <div class="common-actions">
+      <div class="action-bar">
 
-        <ul class="common-actions__priority">
+        <ul class="app-actions app-actions__priority">
             <!-- <li><input type="search" /></li> -->
-            <li><button class="button--primary">Save</button></li>
-            <li><button>Cancel</button></li>
-            <li><a href="#">New Thing</a></li>
+            <li><button class="button--primary">Live</button></li>
+            <li><a href="#" class="icon icon--large fa fa-plus"></a></li>
         </ul>
 
-        <ul class="common-actions__overflow">
+        <ul class="app-actions app-actions__overflow">
             <li><a href="#">Elsewhere</a></li>
             <li><a href="#">Another place</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
 
-        <a href="#" class="common-actions__toggle fa fa-ellipsis-v"></a>
+        <ul class="app-actions">
+          <li><a href="#" class="icon app-actions__toggle fa fa-ellipsis-v"></a></li>
+        </ul>
 
       </div>
 
@@ -359,6 +362,7 @@
       
     </main>
     
+    <footer class="status-bar">Footer stuff here</footer>
 
     <!-- dev -->
     <script src="jspm_packages/system.js"></script>

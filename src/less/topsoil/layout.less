@@ -22,7 +22,10 @@ body.app
 .app {
   display: flex;
   flex-flow: column;
-  width: 100%;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 // style main content area
@@ -31,13 +34,28 @@ main {
   flex-flow: row;
   flex: 1;
 
-  padding: 6rem 1.5rem 1rem 1.5rem;
-  // overflow: auto;
+  // padding: 6rem 1.5rem 1rem 1.5rem;
+  // overflow: hidden;
 }
 
 .active-view {
-  // padding-left: 1rem;
+  display: flex;
+  flex-flow: column;
   flex: 1;
+
+  padding: 0.2rem 1rem;
+  
+  overflow: auto;
+}
+
+.status-bar {
+  display: flex;
+  flex-flow: rows;
+  align-items: center;
+
+  height: 3rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
 }
 
 
@@ -49,8 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Larger than desktop */
 @media (min-width: @bp-larger-than-desktop) {
-
   .active-view {
-    padding-left: 1rem;
+    margin-left: 2rem;
   }
 }
