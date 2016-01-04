@@ -151,6 +151,26 @@ textarea:focus, select:focus {
 }
 
 
+/* Utility: use links in app-bar and navigation header areas as controls */
+.links-as-controls() {
+  a {
+    color: @alt-text-color;
+
+    &:visited {
+      color: @alt-text-color;
+    }
+    &:active, &:hover {
+      outline: 0;
+    }
+    &:active {
+      color: @alt-text-color--secondary;
+    }
+    &:hover {
+      color: @alt-text-color--subtle;
+    }
+  }
+}
+
 .app-bar {
   .box-shadow;
 
@@ -172,27 +192,18 @@ textarea:focus, select:focus {
     color: @alt-text-color;
   }
 
-  a {
-    color: @alt-text-color;
-
-    &:visited {
-      color: @alt-text-color;
-    }
-    &:active, &:hover {
-      outline: 0;
-    }
-    &:active {
-      color: @alt-text-color--secondary;
-    }
-    &:hover {
-      color: @alt-text-color--subtle;
-    }
-  }
+  .links-as-controls;
 }
 
 .navigation-drawer {
   background-color: @canvas-color;
   border-right: 1px solid @divider-color;
+
+  header {
+    background: @primary-color;
+    color: @alt-text-color;
+    .links-as-controls;
+  }
 }
 
 .status-bar {

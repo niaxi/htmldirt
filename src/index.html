@@ -29,29 +29,38 @@
     <header class="app-bar">
 
       <div class="app-title">
-        <ul class="app-actions">
-          <li><a href="#" class="icon app-actions__toggle fa fa-bars"></a></li>
-          <li><h1>HTMLdirt</h1></li>
-        </ul>
+
+        <section class="action-menu">
+          <a href="#" class="icon toggle-menu"><i class="fa fa-bars"></i></a>
+        </section>
+
+        <section class="action-menu">
+          <ul>
+            <li><h1>HTMLdirt</h1></li>
+          </ul>
+        </section>
+
       </div>
 
       <div class="action-bar">
 
-        <ul class="app-actions app-actions__priority">
-            <!-- <li><input type="search" /></li> -->
-            <li><button class="button--primary">Live</button></li>
-            <li><a href="#" class="icon icon--large fa fa-plus"></a></li>
-        </ul>
+        <section class="action-menu action-menu-priority">
+          <ul>
+              <!-- <li><input type="search" /></li> -->
+              <li><button class="button--primary">Live</button></li>
+              <li><a href="#" class="icon icon--large"><i class="fa fa-plus"></i></a></li>
+          </ul>
+        </section>
 
-        <ul class="app-actions app-actions__overflow">
-            <li><a href="#">Elsewhere</a></li>
-            <li><a href="#">Another place</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
+        <section class="action-menu action-menu-collapsible">
+          <ul>
+              <li><a href="#">Elsewhere</a></li>
+              <li><a href="#">Another place</a></li>
+              <li><a href="#">Logout</a></li>
+          </ul>
 
-        <ul class="app-actions">
-          <li><a href="#" class="icon app-actions__toggle fa fa-ellipsis-v"></a></li>
-        </ul>
+          <a href="#" class="icon toggle-menu"><i class="fa fa-ellipsis-v"></i></a>
+        </section>
 
       </div>
 
@@ -60,6 +69,12 @@
     <main>
 
       <aside class="navigation-drawer">
+
+        <header>
+          <ul class="nav-actions">
+            <li><a href="#" class="icon close-navigation-drawer fa fa-times"></a></li>
+          </ul>
+        </header>
 
         <nav>
           <section>
@@ -145,7 +160,6 @@
         <div>
           <p>Then go your own <a href="" title="gets you now here">way</a>!</p>      
         </div>
-
 
         <h2>Form</h2>
 
@@ -362,7 +376,7 @@
       
     </main>
     
-    <footer class="status-bar">Footer stuff here</footer>
+    <footer class="status-bar">status bar here</footer>
 
     <!-- dev -->
     <script src="jspm_packages/system.js"></script>

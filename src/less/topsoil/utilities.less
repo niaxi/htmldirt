@@ -18,3 +18,21 @@
 .debug( @color:#eee, @size:1px ) {
   outline: @size solid @color;
 }
+
+
+/* Flexbox */
+.flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex( @value:1 ) {
+  -webkit-box-flex: @value;
+  -moz-box-flex: @value; 
+  -webkit-flex: @value;
+  -ms-flex: @value;
+  flex: @value;
+}

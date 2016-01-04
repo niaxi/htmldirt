@@ -23,6 +23,8 @@ body.app
   display: flex;
   flex-flow: column;
 
+  min-width: 100vw;
+  min-height: 100vh;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -32,10 +34,15 @@ body.app
 main {
   display: flex;
   flex-flow: row;
-  flex: 1;
+  // flex: 1;
 
   // padding: 6rem 1.5rem 1rem 1.5rem;
-  // overflow: hidden;
+  overflow: hidden;
+}
+
+.navigation-drawer {
+  min-height: 0px;
+  overflow: auto;
 }
 
 .active-view {
@@ -43,19 +50,22 @@ main {
   flex-flow: column;
   flex: 1;
 
-  padding: 0.2rem 1rem;
-  
+  padding: 0.2rem 0.5rem;
+
   overflow: auto;
 }
 
 .status-bar {
+  position: static;
+
   display: flex;
-  flex-flow: rows;
+  flex-flow: row;
   align-items: center;
 
-  height: 3rem;
+  height: 2rem;
   padding: 0.5rem 0.5rem;
   font-size: 1rem;
+  line-height: 2rem;
 }
 
 
@@ -65,9 +75,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Larger than desktop */
+/* Larger than desktop 
 @media (min-width: @bp-larger-than-desktop) {
   .active-view {
     margin-left: 2rem;
   }
-}
+}*/

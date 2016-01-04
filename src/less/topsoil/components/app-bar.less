@@ -10,29 +10,34 @@ Provides fixed area for application title and application level actions
   .common-actions
 */
 
-.app-bar {
+
+/*Utility - put children in a row centered horizontally */
+.horizontally-align-children-center {
   display: flex;
   flex-flow: row;
+  align-items: center;
+}
 
-  // position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5rem;
-  z-index: 1001;
-  padding: 1rem 1rem;
+
+.app-bar {
+  .horizontally-align-children-center;
+  position: static;
+  height: 4rem;
+  padding: 0 0.5rem;
 
   background-color: rgba(255, 255, 255, 0.93);
 
   font-size: 1.5rem; 
   line-height: 1.5;
+
+  a, .icon {
+    line-height: 4rem;
+  }
 }
 
 
 .app-title {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
+  .horizontally-align-children-center;
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -54,25 +59,29 @@ Provides fixed area for application title and application level actions
 
 
 .action-bar {
-  display: flex;
-  flex-flow: row;
+  .horizontally-align-children-center;
+
   flex: 1;
   justify-content: flex-end;
-  align-items: center;
 }
 
 
-.app-actions {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
+.action-menu {
+  .horizontally-align-children-center;
 
-  padding: 0;
-  margin: 0;
+  margin-left: 2rem;  
 
-  list-style: none;
-  text-align: right;
-  margin-left: 2rem;
+  ul {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    text-align: right;
+  }
 
   li {
     padding: 0;
@@ -90,34 +99,26 @@ Provides fixed area for application title and application level actions
   button, input, textarea, select {
     margin: 0;
   }
-}
 
-.app-actions:first-child {
-  margin-left: 0;
-}
-
-
-.app-actions__priority {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-
-  li {
-    display: inline-block;  
+  &:first-child {
+    margin-left: 0;
   }
 }
 
-.app-actions__overflow {
-  display: none;
+
+.action-menu-collapsible {
+  ul {
+    display: none;    
+  }
 }
 
 
-.action-bar.is-expanded {
-  .app-actions__overflow {
+.action-menu-collapsible.is-expanded {
+  ul {
     display: flex;
     flex-flow: column;
 
-    top: 5rem;
+    top: 4rem;
     right: 0;
     position: fixed;
     padding: 1rem;
@@ -135,28 +136,27 @@ Provides fixed area for application title and application level actions
   }
 }
 
+/* make sure the app title is as close to the edge as possible */
+.app-title .action-menu {
+  margin-left: 0;
+  margin-right: 1rem;
+
+  &:first-child {
+    margin-right: 0;
+  }
+}
 
 
 /* Larger than desktop */
 @media (min-width: @bp-larger-than-desktop) {
 
-  .app-actions__toggle {
+  .toggle-menu {
     display: none;
   }
 
-  .action-bar.is-expanded {
-    .app-actions__overflow {
-      width: 50%;
-    }
-  }
-
-  .app-actions__overflow {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-
-    li {
-      display: inline-block;  
+  .action-menu-collapsible {
+    ul {
+      display: flex;
     }
   }
 
