@@ -151,7 +151,27 @@ textarea:focus, select:focus {
 }
 
 
-body > header {
+/* Utility: use links in app-bar and navigation header areas as controls */
+.links-as-controls() {
+  a {
+    color: @alt-text-color;
+
+    &:visited {
+      color: @alt-text-color;
+    }
+    &:active, &:hover {
+      outline: 0;
+    }
+    &:active {
+      color: @alt-text-color--secondary;
+    }
+    &:hover {
+      color: @alt-text-color--subtle;
+    }
+  }
+}
+
+.app-bar {
   .box-shadow;
 
   background: @primary-color;
@@ -172,27 +192,23 @@ body > header {
     color: @alt-text-color;
   }
 
-  a {
-    color: @alt-text-color;
+  .links-as-controls;
+}
 
-    &:visited {
-      color: @alt-text-color;
-    }
-    &:active, &:hover {
-      outline: 0;
-    }
-    &:active {
-      color: @alt-text-color--secondary;
-    }
-    &:hover {
-      color: @alt-text-color--subtle;
-    }
+.navigation-drawer {
+  background-color: @canvas-color;
+  border-right: 1px solid @divider-color;
+
+  header {
+    background: @primary-color;
+    color: @alt-text-color;
+    .links-as-controls;
   }
 }
 
-body > aside {
-  background-color: @canvas-color;
-  border-right: 1px solid @divider-color;
+.status-bar {
+  border-top: 1px solid @divider-color;
+  color: @alt-text-color--subtle;
 }
 
 
@@ -202,7 +218,7 @@ body > aside {
     font-size: 1.5em;
   }
 
-  body > main {
+  .active-view {
     // border-left: 2px solid @divider-color;
   }
 }
