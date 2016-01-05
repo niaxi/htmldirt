@@ -99,15 +99,35 @@ Application level navigation
     padding: 0;
   }
 
-  nav {
-    padding: 0.5rem;
+  h1, h2, h3, h4, h5, h6 {
+    padding-left: 0.5rem;
+  }
 
-    ul {
-      margin-left: 1.9rem;
-    }
+  nav {
+
     li {
       margin-top: 0.2rem;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        padding-left: 1.9rem;
+
+        &.active {
+          background-color: #444;
+        }
+      }
     }
+  }
+}
+
+/* make an adhoc area appear like nav list, should mimic 
+positioning styles applied to nav links. e.g. indentation. */
+.navigation-drawer__pseudo-section{
+  padding-left: 1.9rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    padding-left: 0;
   }
 }
 
