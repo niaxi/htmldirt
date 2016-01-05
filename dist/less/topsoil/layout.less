@@ -34,7 +34,7 @@ body.app
 main {
   display: flex;
   flex-flow: row;
-  // flex: 1;
+  flex: 1;
 
   // padding: 6rem 1.5rem 1rem 1.5rem;
   overflow: hidden;
@@ -50,9 +50,8 @@ main {
   flex-flow: column;
   flex: 1;
 
-  padding: 0.2rem 0.5rem;
-
   overflow: auto;
+  // padding: 0.2rem 0 0.2rem 0.5rem;
 }
 
 .status-bar {
@@ -75,9 +74,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Larger than desktop 
+/* Larger than desktop */
 @media (min-width: @bp-larger-than-desktop) {
   .active-view {
-    margin-left: 2rem;
+
+    /* hack! Chrome layout issue when main{flex:1;} is set */
+    // margin-left: 1rem;
   }
-}*/
+}

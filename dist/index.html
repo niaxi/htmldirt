@@ -47,16 +47,16 @@
         <section class="action-menu action-menu-priority">
           <ul>
               <!-- <li><input type="search" /></li> -->
-              <li><button class="button--primary">Live</button></li>
-              <li><a href="#" class="icon icon--large"><i class="fa fa-plus"></i></a></li>
+              <li><button class="button--primary">Priority</button></li>
+              <li><a href="#" class="icon icon-labeled"><i class="fa fa-plus"></i>Items</a></li>
           </ul>
         </section>
 
         <section class="action-menu action-menu-collapsible">
           <ul>
-              <li><a href="#">Elsewhere</a></li>
-              <li><a href="#">Another place</a></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="#">Overflow</a></li>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Items</a></li>
           </ul>
 
           <a href="#" class="icon toggle-menu"><i class="fa fa-ellipsis-v"></i></a>
@@ -78,19 +78,27 @@
 
         <nav>
           <section>
-            <h3><i class="fa fa-user"></i> My Account</h3>
+            <h3><i class="fa fa-object-group"></i>Example Layouts</h3>
             <ul>
-              <li><a href="#/account/preferences">Preferences</a></li>
-              <li><a href="#/account/profile">Profile</a></li>
+              <li><a href="" class="active">Overview (Start here)</a></li>
+              <li><a href="/layout-blank.html">Blank</a></li>
             </ul>
           </section>
 
-          <footer>
+          <section>
+            <h3><i class="fa fa-magic"></i>Available Themes</h3>
+            <ul>
+              <li><a href="/theme-topsoil.html">Topsoil</a></li>
+              <li><a href="/theme-bluenight.html">Bluenight</a></li>
+            </ul>
+          </section>
+
+          <section>
             <h3><i class="fa fa-paint-brush"></i>Colors</h3>
 
-            <div class="hd-swatches">
+            <div class="hd-swatches navigation-drawer__pseudo-section">
               <h4>canvas</h4>
-              <ul>
+              <ul class="n">
                 <li class="canvas-color" title="canvas-color"></li>
               </ul>
 
@@ -103,7 +111,7 @@
               </ul>
 
               <h4>complementary</h4>
-              <ul>
+              <ul class="">
                 <li class="complementary-color" title="complementary-color"></li>
                 <li class="complementary-color--dark" title="complementary-color--dark"></li>
                 <li class="complementary-color--light" title="complementary-color--light"></li>
@@ -149,16 +157,17 @@
                 <li class="divider-color" title="divider-color"></li>
               </ul>
             </div>
-          </footer>
+          </section>
+          
         </nav>
 
       </aside>
 
       <article class="active-view">
 
-        <h1>Start here</h1>
+        <h1>Overview</h1>
         <div>
-          <p>Then go your own <a href="" title="gets you now here">way</a>!</p>      
+          <p>Start here, then go your own <a href="" title="gets you now here">way</a>!</p>      
         </div>
 
         <h2>Basic elements</h2>
